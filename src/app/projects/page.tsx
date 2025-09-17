@@ -17,7 +17,7 @@ export default function ProjectsPage() {
           
           {/* Middle Column - Main Content */}
           <div className="w-full md:w-[500px] pt-6 md:pt-12">
-            <div className="space-y-8">
+            <div className="space-y-8 break-words overflow-wrap-anywhere">
               <h1 className="text-xl font-medium text-foreground mb-6">Projects</h1>
               
               <div className="space-y-8">

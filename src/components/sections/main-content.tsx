@@ -2,7 +2,7 @@ import React from 'react';
 
 const MainContent = () => {
   return (
-    <div className="flex flex-col space-y-4">
+    <div className="flex flex-col space-y-4 break-words overflow-wrap-anywhere">
       <p className="text-sm text-foreground leading-relaxed">
         Hi, I'm Ahmad Sadiq – a passionate Software Engineer with a flair for turning complex challenges into innovative, user-centered solutions. I was born in <span className="text-sm bg-gradient-to-r from-[#606c38] to-[#d4af37] bg-clip-text text-transparent">Pakistan</span> and lived my whole life in <span className="text-sm bg-gradient-to-r from-[#d1d5db] to-[#800020] bg-clip-text text-transparent">Qatar</span>, where the vibrant culture and fast-paced environment taught me early on the value of creativity and resilience.
       </p>

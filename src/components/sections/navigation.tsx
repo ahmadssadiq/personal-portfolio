@@ -16,7 +16,7 @@ export default function Navigation() {
   return (
     <div>
       <p className="mb-4 md:mb-6 text-xs md:text-sm font-normal text-muted">Ahmad Sadiq</p>
-      <nav className="flex flex-row md:flex-col gap-2 md:gap-2 flex-wrap">
+      <nav className="flex flex-row md:flex-col gap-3 md:gap-2 overflow-x-auto md:overflow-x-visible">
         <Link
           href="/"
           className={`text-xs md:text-sm font-medium whitespace-nowrap transition-colors ${

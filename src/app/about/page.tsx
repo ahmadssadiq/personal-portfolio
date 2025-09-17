@@ -16,7 +16,7 @@ export default function AboutPage() {
           
           {/* Middle Column - Main Content */}
           <div className="w-full md:w-[500px] pt-6 md:pt-12">
-            <div className="space-y-8">
+            <div className="space-y-8 break-words overflow-wrap-anywhere">
 
               {/* Experience Section */}
               <div>

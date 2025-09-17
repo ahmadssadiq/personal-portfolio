@@ -36,7 +36,7 @@ export default function ProjectsPage() {
                 </div>
 
                 {/* DeveloperTok */}
-                <div className="border-b border-border pb-6">
+                {/* <div className="border-b border-border pb-6">
                     <h3 className="text-base font-medium text-foreground mb-2">DeveloperTok</h3>
                   <p className="text-sm text-foreground mb-4">
                     A cutting-edge microlearning platform designed to revolutionize the way coding is taught and learned. Inspired by TikTok, DeveloperTok delivers bite-sized, one-minute coding lessons across various topics in a fun, interactive, and highly accessible format. Built with React, Node.js, and MongoDB.
@@ -47,7 +47,7 @@ export default function ProjectsPage() {
                   >
                     Learn More
                   </Link>
-                </div>
+                </div> */}
 
                 {/* QuizIt */}
                 <div className="border-b border-border pb-6">

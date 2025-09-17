@@ -25,7 +25,7 @@ export default function AboutPage() {
                   {/* IWM */}
                   <div className="border-b border-border pb-6">
                     <div className="flex justify-between items-start mb-2">
-                      <h3 className="text-base font-medium text-foreground">IWM</h3>
+                      <h3 className="text-lg font-medium text-foreground">IWM, NY USA</h3>
                       <span className="text-sm text-muted">Jun 2025 - Present</span>
                     </div>
                     <p className="text-sm font-medium text-foreground mb-3">Founding Engineer</p>
@@ -46,8 +46,8 @@ export default function AboutPage() {
                   {/* ACTEX Learning */}
                   <div className="border-b border-border pb-6">
                     <div className="flex justify-between items-start mb-2">
-                      <h3 className="text-base font-medium text-foreground">ACTEX Learning, MA USA</h3>
-                      <span className="text-sm text-muted">May 2025 – Present</span>
+                      <h3 className="text-lg font-medium text-foreground">ACTEX Learning, MA USA</h3>
+                      <span className="text-sm text-muted">May 2025 – Jun 2025</span>
                     </div>
                     <p className="text-sm font-medium text-foreground mb-3">Quality Assurance Engineer</p>
                     <div className="space-y-2 text-sm text-foreground">
@@ -61,7 +61,7 @@ export default function AboutPage() {
                   {/* DuneAI */}
                   <div className="border-b border-border pb-6">
                     <div className="flex justify-between items-start mb-2">
-                      <h3 className="text-base font-medium text-foreground">DuneAI</h3>
+                      <h3 className="text-lg font-medium text-foreground">DuneAI</h3>
                       <span className="text-sm text-muted">Jun 2024 - Aug 2024</span>
                     </div>
                     <p className="text-sm font-medium text-foreground mb-3">Robotics Software Engineer</p>
@@ -82,7 +82,7 @@ export default function AboutPage() {
                   {/* AheadCare */}
                   <div className="border-b border-border pb-6">
                     <div className="flex justify-between items-start mb-2">
-                      <h3 className="text-base font-medium text-foreground">AheadCare</h3>
+                      <h3 className="text-lg font-medium text-foreground">AheadCare</h3>
                       <span className="text-sm text-muted">Jun 2023 - Mar 2024</span>
                     </div>
                     <p className="text-sm font-medium text-foreground mb-3">CEO</p>
@@ -97,7 +97,7 @@ export default function AboutPage() {
                   {/* Starlink */}
                   <div>
                     <div className="flex justify-between items-start mb-2">
-                      <h3 className="text-base font-medium text-foreground">Starlink</h3>
+                      <h3 className="text-lg font-medium text-foreground">Starlink</h3>
                       <span className="text-sm text-muted">Jun 2022 - Aug 2022</span>
                     </div>
                     <p className="text-sm font-medium text-foreground mb-3">Full Stack Developer</p>

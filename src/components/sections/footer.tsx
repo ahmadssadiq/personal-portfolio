@@ -2,10 +2,10 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="w-full mt-16">
+    <footer className="w-full mt-16 pb-24">
       <div className="container flex justify-between items-center">
         <p className="text-sm font-normal text-muted">
-          hmm... thinking
+          Currently: NY
         </p>
         <div className="flex items-center gap-6">
           <a

@@ -28,12 +28,12 @@ export default function AboutPage() {
                       <h3 className="text-lg font-medium text-foreground">IWM, NY USA</h3>
                       <span className="text-sm text-muted">Jun 2025 - Present</span>
                     </div>
-                    <p className="text-sm font-medium text-foreground mb-3">Founding Engineer</p>
-                    <div className="space-y-2 text-sm text-foreground">
-                      <p>• Built a complete React Native application with TypeScript, Node.js/Express backend and PostgreSQL database.</p>
-                      <p>• Developed sophisticated waitlist ranking system inspired by Monzo's approach with logarithmic scaling.</p>
-                      <p>• Created streamlined 5-step onboarding flow reducing registration time to under 5 minutes.</p>
-                      <p>• Integrated AppsFlyer SDK for professional attribution tracking and deep linking capabilities.</p>
+                    <p className="text-sm text-muted mb-3">Founding Engineer</p>
+                    <div className="space-y-1">
+                      <div className="text-muted" style={{fontSize: '14px', lineHeight: '1.4'}}>• Built a complete React Native application with TypeScript, Node.js/Express backend and PostgreSQL database.</div>
+                      <div className="text-muted" style={{fontSize: '14px', lineHeight: '1.4'}}>• Developed sophisticated waitlist ranking system inspired by Monzo's approach with logarithmic scaling.</div>
+                      <div className="text-muted" style={{fontSize: '14px', lineHeight: '1.4'}}>• Created streamlined 5-step onboarding flow reducing registration time to under 5 minutes.</div>
+                      <div className="text-muted" style={{fontSize: '14px', lineHeight: '1.4'}}>• Integrated AppsFlyer SDK for professional attribution tracking and deep linking capabilities.</div>
                     </div>
                     <a 
                       href="/experience/iwm" 
@@ -49,12 +49,12 @@ export default function AboutPage() {
                       <h3 className="text-lg font-medium text-foreground">ACTEX Learning, MA USA</h3>
                       <span className="text-sm text-muted">May 2025 – Jun 2025</span>
                     </div>
-                    <p className="text-sm font-medium text-foreground mb-3">Quality Assurance Engineer</p>
-                    <div className="space-y-2 text-sm text-foreground">
-                      <p>• Ran cross-platform smoke & regression tests on macOS, iOS, and web builds of the Eureka! e-reader.</p>
-                      <p>• Logged defects with repro steps, screenshots, and severity tags in Asana; collaborated with devs to triage issues.</p>
-                      <p>• Drafted a "Getting Started" README and reusable test-case templates to onboard future testers.</p>
-                      <p>• Expanded the suite with edge-case scenarios (offline mode, update-over-install, accessibility compliance).</p>
+                    <p className="text-sm text-muted mb-3">Quality Assurance Engineer</p>
+                    <div className="space-y-1">
+                      <div className="text-muted" style={{fontSize: '14px', lineHeight: '1.4'}}>• Ran cross-platform smoke & regression tests on macOS, iOS, and web builds of the Eureka! e-reader.</div>
+                      <div className="text-muted" style={{fontSize: '14px', lineHeight: '1.4'}}>• Logged defects with repro steps, screenshots, and severity tags in Asana; collaborated with devs to triage issues.</div>
+                      <div className="text-muted" style={{fontSize: '14px', lineHeight: '1.4'}}>• Drafted a "Getting Started" README and reusable test-case templates to onboard future testers.</div>
+                      <div className="text-muted" style={{fontSize: '14px', lineHeight: '1.4'}}>• Expanded the suite with edge-case scenarios (offline mode, update-over-install, accessibility compliance).</div>
                     </div>
                   </div>
 
@@ -64,12 +64,12 @@ export default function AboutPage() {
                       <h3 className="text-lg font-medium text-foreground">DuneAI</h3>
                       <span className="text-sm text-muted">Jun 2024 - Aug 2024</span>
                     </div>
-                    <p className="text-sm font-medium text-foreground mb-3">Robotics Software Engineer</p>
-                    <div className="space-y-2 text-sm text-foreground">
-                      <p>• Designed and implemented multi-agent pathfinding algorithms leveraging C++ and OpenGL.</p>
-                      <p>• Optimized robot sorting operations on a simulated grid.</p>
-                      <p>• Constructed a Python barcode scanner to automate task assignment.</p>
-                      <p>• Developed unit tests with Google Test for code reliability.</p>
+                    <p className="text-sm text-muted mb-3">Robotics Software Engineer</p>
+                    <div className="space-y-1">
+                      <div className="text-muted" style={{fontSize: '14px', lineHeight: '1.4'}}>• Designed and implemented multi-agent pathfinding algorithms leveraging C++ and OpenGL.</div>
+                      <div className="text-muted" style={{fontSize: '14px', lineHeight: '1.4'}}>• Optimized robot sorting operations on a simulated grid.</div>
+                      <div className="text-muted" style={{fontSize: '14px', lineHeight: '1.4'}}>• Constructed a Python barcode scanner to automate task assignment.</div>
+                      <div className="text-muted" style={{fontSize: '14px', lineHeight: '1.4'}}>• Developed unit tests with Google Test for code reliability.</div>
                     </div>
                     <a 
                       href="/experience/duneai" 
@@ -85,12 +85,12 @@ export default function AboutPage() {
                       <h3 className="text-lg font-medium text-foreground">AheadCare</h3>
                       <span className="text-sm text-muted">Jun 2023 - Mar 2024</span>
                     </div>
-                    <p className="text-sm font-medium text-foreground mb-3">CEO</p>
-                    <div className="space-y-2 text-sm text-foreground">
-                      <p>• Developed an ML Predictive FAQ system using LangChain.</p>
-                      <p>• Streamlined customer database updates with adaptive learning algorithms.</p>
-                      <p>• Improved real-time response accuracy by 30%.</p>
-                      <p>• Collaborated with investors to secure $25,000 in funding.</p>
+                    <p className="text-sm text-muted mb-3">CEO</p>
+                    <div className="space-y-1">
+                      <div className="text-muted" style={{fontSize: '14px', lineHeight: '1.4'}}>• Developed an ML Predictive FAQ system using LangChain.</div>
+                      <div className="text-muted" style={{fontSize: '14px', lineHeight: '1.4'}}>• Streamlined customer database updates with adaptive learning algorithms.</div>
+                      <div className="text-muted" style={{fontSize: '14px', lineHeight: '1.4'}}>• Improved real-time response accuracy by 30%.</div>
+                      <div className="text-muted" style={{fontSize: '14px', lineHeight: '1.4'}}>• Collaborated with investors to secure $25,000 in funding.</div>
                     </div>
                   </div>
 
@@ -100,12 +100,12 @@ export default function AboutPage() {
                       <h3 className="text-lg font-medium text-foreground">Starlink</h3>
                       <span className="text-sm text-muted">Jun 2022 - Aug 2022</span>
                     </div>
-                    <p className="text-sm font-medium text-foreground mb-3">Full Stack Developer</p>
-                    <div className="space-y-2 text-sm text-foreground">
-                      <p>• Executed a responsive e-commerce platform using React and Python/Django.</p>
-                      <p>• Increased user engagement and sales by 20%.</p>
-                      <p>• Optimized database queries and achieved real-time data synchronization.</p>
-                      <p>• Reduced load times by 30%.</p>
+                    <p className="text-sm text-muted mb-3">Full Stack Developer</p>
+                    <div className="space-y-1">
+                      <div className="text-muted" style={{fontSize: '14px', lineHeight: '1.4'}}>• Executed a responsive e-commerce platform using React and Python/Django.</div>
+                      <div className="text-muted" style={{fontSize: '14px', lineHeight: '1.4'}}>• Increased user engagement and sales by 20%.</div>
+                      <div className="text-muted" style={{fontSize: '14px', lineHeight: '1.4'}}>• Optimized database queries and achieved real-time data synchronization.</div>
+                      <div className="text-muted" style={{fontSize: '14px', lineHeight: '1.4'}}>• Reduced load times by 30%.</div>
                     </div>
                   </div>
                 </div>

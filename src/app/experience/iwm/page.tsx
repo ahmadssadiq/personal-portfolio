@@ -198,7 +198,7 @@ export default function IWMPage() {
               <video
                 src="/images/FinalAppShowcase.mp4"
                 controls
-                className="w-full h-[200px] object-cover rounded-lg"
+                className="w-full rounded-lg"
                 preload="metadata"
               >
                 Your browser does not support the video tag.

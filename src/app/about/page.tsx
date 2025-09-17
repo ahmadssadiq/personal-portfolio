@@ -25,7 +25,23 @@ export default function AboutPage() {
                   {/* IWM */}
                   <div className="border-b border-border pb-6">
                     <div className="flex justify-between items-start mb-2">
-                      <h3 className="text-lg font-medium text-foreground">IWM, NY USA</h3>
+                      <div className="flex items-center gap-2">
+                        <a 
+                          href="https://www.iwmprivate.com" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+                        >
+                          <Image
+                            src="/images/iwm.jpeg"
+                            alt="IWM Logo"
+                            width={20}
+                            height={20}
+                            className="rounded-sm"
+                          />
+                          <h3 className="text-lg font-medium text-foreground">IWM, NY USA</h3>
+                        </a>
+                      </div>
                       <span className="text-sm text-muted">Jun 2025 - Present</span>
                     </div>
                     <p className="text-sm text-muted mb-3">Founding Engineer</p>
@@ -46,7 +62,23 @@ export default function AboutPage() {
                   {/* ACTEX Learning */}
                   <div className="border-b border-border pb-6">
                     <div className="flex justify-between items-start mb-2">
-                      <h3 className="text-lg font-medium text-foreground">ACTEX Learning, MA USA</h3>
+                      <div className="flex items-center gap-2">
+                        <a 
+                          href="https://www.actexlearning.com" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+                        >
+                          <Image
+                            src="/images/actex.jpeg"
+                            alt="ACTEX Learning Logo"
+                            width={20}
+                            height={20}
+                            className="rounded-sm"
+                          />
+                          <h3 className="text-lg font-medium text-foreground">ACTEX Learning, MA USA</h3>
+                        </a>
+                      </div>
                       <span className="text-sm text-muted">May 2025 – Jun 2025</span>
                     </div>
                     <p className="text-sm text-muted mb-3">Quality Assurance Engineer</p>
@@ -61,7 +93,23 @@ export default function AboutPage() {
                   {/* DuneAI */}
                   <div className="border-b border-border pb-6">
                     <div className="flex justify-between items-start mb-2">
-                      <h3 className="text-lg font-medium text-foreground">DuneAI</h3>
+                      <div className="flex items-center gap-2">
+                        <a 
+                          href="#" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+                        >
+                          <Image
+                            src="/images/dune_ai_logo.jpeg"
+                            alt="DuneAI Logo"
+                            width={20}
+                            height={20}
+                            className="rounded-sm"
+                          />
+                          <h3 className="text-lg font-medium text-foreground">DuneAI</h3>
+                        </a>
+                      </div>
                       <span className="text-sm text-muted">Jun 2024 - Aug 2024</span>
                     </div>
                     <p className="text-sm text-muted mb-3">Robotics Software Engineer</p>
@@ -97,7 +145,23 @@ export default function AboutPage() {
                   {/* Starlink */}
                   <div>
                     <div className="flex justify-between items-start mb-2">
-                      <h3 className="text-lg font-medium text-foreground">Starlink</h3>
+                      <div className="flex items-center gap-2">
+                        <a 
+                          href="https://www.starlink.qa" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+                        >
+                          <Image
+                            src="/images/starlink.jpg"
+                            alt="Starlink Logo"
+                            width={20}
+                            height={20}
+                            className="rounded-sm"
+                          />
+                          <h3 className="text-lg font-medium text-foreground">Starlink</h3>
+                        </a>
+                      </div>
                       <span className="text-sm text-muted">Jun 2022 - Aug 2022</span>
                     </div>
                     <p className="text-sm text-muted mb-3">Full Stack Developer</p>

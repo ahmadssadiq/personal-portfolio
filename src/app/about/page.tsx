@@ -8,14 +8,14 @@ export default function AboutPage() {
       {/* Main container follows exact layout margins and width */}
       <div className="container py-6 md:py-12">
         {/* Mobile: Stack vertically, Desktop: Horizontal layout */}
-        <div className="flex flex-col md:flex-row gap-6 md:gap-[60px]">
+        <div className="flex flex-col md:flex-row gap-6 md:gap-[60px] min-w-0">
           {/* Left Column - Navigation */}
           <div className="w-full md:w-[200px] md:flex-shrink-0 pt-6 md:pt-12">
             <Navigation />
           </div>
           
           {/* Middle Column - Main Content */}
-          <div className="w-full md:w-[500px] pt-6 md:pt-12">
+          <div className="w-full md:w-[500px] pt-6 md:pt-12 min-w-0">
             <div className="space-y-8 break-words overflow-wrap-anywhere">
 
               {/* Experience Section */}

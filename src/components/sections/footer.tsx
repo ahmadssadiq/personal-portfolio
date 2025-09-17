@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="w-full mt-16">
       <div className="container flex justify-between items-center">
         <p className="text-sm font-normal text-muted">
-          Ahmad Sadiq
+          hmm... thinking
         </p>
         <div className="flex items-center gap-6">
           <a

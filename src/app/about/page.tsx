@@ -30,10 +30,10 @@ export default function AboutPage() {
                     </div>
                     <p className="text-sm text-muted mb-3">Founding Engineer</p>
                     <div className="space-y-1">
-                      <div className="text-muted" style={{fontSize: '14px', lineHeight: '1.4'}}>• Built a complete React Native application with TypeScript, Node.js/Express backend and PostgreSQL database.</div>
-                      <div className="text-muted" style={{fontSize: '14px', lineHeight: '1.4'}}>• Developed sophisticated waitlist ranking system inspired by Monzo's approach with logarithmic scaling.</div>
-                      <div className="text-muted" style={{fontSize: '14px', lineHeight: '1.4'}}>• Created streamlined 5-step onboarding flow reducing registration time to under 5 minutes.</div>
-                      <div className="text-muted" style={{fontSize: '14px', lineHeight: '1.4'}}>• Integrated AppsFlyer SDK for professional attribution tracking and deep linking capabilities.</div>
+                      <div className="text-foreground" style={{fontSize: '14px', lineHeight: '1.4'}}>• Built a complete React Native application with TypeScript, Node.js/Express backend and PostgreSQL database.</div>
+                      <div className="text-foreground" style={{fontSize: '14px', lineHeight: '1.4'}}>• Developed sophisticated waitlist ranking system inspired by Monzo's approach with logarithmic scaling.</div>
+                      <div className="text-foreground" style={{fontSize: '14px', lineHeight: '1.4'}}>• Created streamlined 5-step onboarding flow reducing registration time to under 5 minutes.</div>
+                      <div className="text-foreground" style={{fontSize: '14px', lineHeight: '1.4'}}>• Integrated AppsFlyer SDK for professional attribution tracking and deep linking capabilities.</div>
                     </div>
                     <a 
                       href="/experience/iwm" 
@@ -51,10 +51,10 @@ export default function AboutPage() {
                     </div>
                     <p className="text-sm text-muted mb-3">Quality Assurance Engineer</p>
                     <div className="space-y-1">
-                      <div className="text-muted" style={{fontSize: '14px', lineHeight: '1.4'}}>• Ran cross-platform smoke & regression tests on macOS, iOS, and web builds of the Eureka! e-reader.</div>
-                      <div className="text-muted" style={{fontSize: '14px', lineHeight: '1.4'}}>• Logged defects with repro steps, screenshots, and severity tags in Asana; collaborated with devs to triage issues.</div>
-                      <div className="text-muted" style={{fontSize: '14px', lineHeight: '1.4'}}>• Drafted a "Getting Started" README and reusable test-case templates to onboard future testers.</div>
-                      <div className="text-muted" style={{fontSize: '14px', lineHeight: '1.4'}}>• Expanded the suite with edge-case scenarios (offline mode, update-over-install, accessibility compliance).</div>
+                      <div className="text-foreground" style={{fontSize: '14px', lineHeight: '1.4'}}>• Ran cross-platform smoke & regression tests on macOS, iOS, and web builds of the Eureka! e-reader.</div>
+                      <div className="text-foreground" style={{fontSize: '14px', lineHeight: '1.4'}}>• Logged defects with repro steps, screenshots, and severity tags in Asana; collaborated with devs to triage issues.</div>
+                      <div className="text-foreground" style={{fontSize: '14px', lineHeight: '1.4'}}>• Drafted a "Getting Started" README and reusable test-case templates to onboard future testers.</div>
+                      <div className="text-foreground" style={{fontSize: '14px', lineHeight: '1.4'}}>• Expanded the suite with edge-case scenarios (offline mode, update-over-install, accessibility compliance).</div>
                     </div>
                   </div>
 
@@ -66,10 +66,10 @@ export default function AboutPage() {
                     </div>
                     <p className="text-sm text-muted mb-3">Robotics Software Engineer</p>
                     <div className="space-y-1">
-                      <div className="text-muted" style={{fontSize: '14px', lineHeight: '1.4'}}>• Designed and implemented multi-agent pathfinding algorithms leveraging C++ and OpenGL.</div>
-                      <div className="text-muted" style={{fontSize: '14px', lineHeight: '1.4'}}>• Optimized robot sorting operations on a simulated grid.</div>
-                      <div className="text-muted" style={{fontSize: '14px', lineHeight: '1.4'}}>• Constructed a Python barcode scanner to automate task assignment.</div>
-                      <div className="text-muted" style={{fontSize: '14px', lineHeight: '1.4'}}>• Developed unit tests with Google Test for code reliability.</div>
+                      <div className="text-foreground" style={{fontSize: '14px', lineHeight: '1.4'}}>• Designed and implemented multi-agent pathfinding algorithms leveraging C++ and OpenGL.</div>
+                      <div className="text-foreground" style={{fontSize: '14px', lineHeight: '1.4'}}>• Optimized robot sorting operations on a simulated grid.</div>
+                      <div className="text-foreground" style={{fontSize: '14px', lineHeight: '1.4'}}>• Constructed a Python barcode scanner to automate task assignment.</div>
+                      <div className="text-foreground" style={{fontSize: '14px', lineHeight: '1.4'}}>• Developed unit tests with Google Test for code reliability.</div>
                     </div>
                     <a 
                       href="/experience/duneai" 
@@ -87,10 +87,10 @@ export default function AboutPage() {
                     </div>
                     <p className="text-sm text-muted mb-3">CEO</p>
                     <div className="space-y-1">
-                      <div className="text-muted" style={{fontSize: '14px', lineHeight: '1.4'}}>• Developed an ML Predictive FAQ system using LangChain.</div>
-                      <div className="text-muted" style={{fontSize: '14px', lineHeight: '1.4'}}>• Streamlined customer database updates with adaptive learning algorithms.</div>
-                      <div className="text-muted" style={{fontSize: '14px', lineHeight: '1.4'}}>• Improved real-time response accuracy by 30%.</div>
-                      <div className="text-muted" style={{fontSize: '14px', lineHeight: '1.4'}}>• Collaborated with investors to secure $25,000 in funding.</div>
+                      <div className="text-foreground" style={{fontSize: '14px', lineHeight: '1.4'}}>• Developed an ML Predictive FAQ system using LangChain.</div>
+                      <div className="text-foreground" style={{fontSize: '14px', lineHeight: '1.4'}}>• Streamlined customer database updates with adaptive learning algorithms.</div>
+                      <div className="text-foreground" style={{fontSize: '14px', lineHeight: '1.4'}}>• Improved real-time response accuracy by 30%.</div>
+                      <div className="text-foreground" style={{fontSize: '14px', lineHeight: '1.4'}}>• Collaborated with investors to secure $25,000 in funding.</div>
                     </div>
                   </div>
 
@@ -102,10 +102,10 @@ export default function AboutPage() {
                     </div>
                     <p className="text-sm text-muted mb-3">Full Stack Developer</p>
                     <div className="space-y-1">
-                      <div className="text-muted" style={{fontSize: '14px', lineHeight: '1.4'}}>• Executed a responsive e-commerce platform using React and Python/Django.</div>
-                      <div className="text-muted" style={{fontSize: '14px', lineHeight: '1.4'}}>• Increased user engagement and sales by 20%.</div>
-                      <div className="text-muted" style={{fontSize: '14px', lineHeight: '1.4'}}>• Optimized database queries and achieved real-time data synchronization.</div>
-                      <div className="text-muted" style={{fontSize: '14px', lineHeight: '1.4'}}>• Reduced load times by 30%.</div>
+                      <div className="text-foreground" style={{fontSize: '14px', lineHeight: '1.4'}}>• Executed a responsive e-commerce platform using React and Python/Django.</div>
+                      <div className="text-foreground" style={{fontSize: '14px', lineHeight: '1.4'}}>• Increased user engagement and sales by 20%.</div>
+                      <div className="text-foreground" style={{fontSize: '14px', lineHeight: '1.4'}}>• Optimized database queries and achieved real-time data synchronization.</div>
+                      <div className="text-foreground" style={{fontSize: '14px', lineHeight: '1.4'}}>• Reduced load times by 30%.</div>
                     </div>
                   </div>
                 </div>

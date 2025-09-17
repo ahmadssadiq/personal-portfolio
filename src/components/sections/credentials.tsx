@@ -2,12 +2,12 @@ import React from 'react';
 
 const CredentialsSection = () => {
   return (
-    <div className="mt-8">
-      <p className="mb-1 text-base font-normal text-muted">
-        / Backed by a16z Speedrun
+    <div className="mt-6">
+      <p className="mb-1 text-sm font-normal text-muted">
+        / <span className="text-sm bg-gradient-to-r from-[#dc2626] to-[#fca5a5] bg-clip-text text-transparent">Boston University</span> Computer Science
       </p>
-      <p className="m-0 text-base font-normal text-muted">
-        / 200k+ Users
+      <p className="m-0 text-sm font-normal text-muted">
+        / Available for opportunities
       </p>
     </div>
   );

@@ -1,19 +1,59 @@
+'use client';
+
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export default function Navigation() {
+  const pathname = usePathname();
+
+  const isActive = (path: string) => {
+    if (path === '/') {
+      return pathname === '/';
+    }
+    return pathname.startsWith(path);
+  };
+
   return (
     <div>
-      <p className="mb-8 text-base font-normal text-muted">Azimov</p>
-      <nav className="flex flex-col gap-3">
+      <p className="mb-4 md:mb-6 text-xs md:text-sm font-normal text-muted">Ahmad Sadiq</p>
+      <nav className="flex flex-row md:flex-col gap-2 md:gap-2 flex-wrap">
         <Link
           href="/"
-          className="text-base font-medium text-muted hover:text-link-hover"
+          className={`text-xs md:text-sm font-medium whitespace-nowrap transition-colors ${
+            isActive('/') 
+              ? 'bg-gradient-to-r from-[#606c38] to-[#fefae0] bg-clip-text text-transparent' 
+              : 'text-muted hover:text-link-hover'
+          }`}
         >
-          About
+          Home
+        </Link>
+        <Link
+          href="/about"
+          className={`text-xs md:text-sm font-medium whitespace-nowrap transition-colors ${
+            isActive('/about') 
+              ? 'bg-gradient-to-r from-[#606c38] to-[#fefae0] bg-clip-text text-transparent' 
+              : 'text-muted hover:text-link-hover'
+          }`}
+        >
+          Experiences
+        </Link>
+        <Link
+          href="/projects"
+          className={`text-xs md:text-sm font-medium whitespace-nowrap transition-colors ${
+            isActive('/projects') 
+              ? 'bg-gradient-to-r from-[#606c38] to-[#fefae0] bg-clip-text text-transparent' 
+              : 'text-muted hover:text-link-hover'
+          }`}
+        >
+          Projects
         </Link>
         <Link
           href="/news"
-          className="text-base font-medium text-muted hover:text-link-hover"
+          className={`text-xs md:text-sm font-medium whitespace-nowrap transition-colors ${
+            isActive('/news') 
+              ? 'bg-gradient-to-r from-[#606c38] to-[#fefae0] bg-clip-text text-transparent' 
+              : 'text-muted hover:text-link-hover'
+          }`}
         >
           News
         </Link>

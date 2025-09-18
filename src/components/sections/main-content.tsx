@@ -1,19 +1,51 @@
 import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const MainContent = () => {
   return (
     <div className="flex flex-col space-y-4 break-words overflow-wrap-anywhere">
-      <p className="text-sm text-foreground leading-relaxed">
-        Hi, I'm Ahmad Sadiq – a passionate Software Engineer with a flair for turning complex challenges into innovative, user-centered solutions. I was born in <span className="text-sm bg-gradient-to-r from-[#606c38] to-[#d4af37] bg-clip-text text-transparent">Pakistan</span> and lived my whole life in <span className="text-sm bg-gradient-to-r from-[#d1d5db] to-[#800020] bg-clip-text text-transparent">Qatar</span>, where the vibrant culture and fast-paced environment taught me early on the value of creativity and resilience.
+      <p className="text-sm text-foreground text-muted leading-relaxed">
+      <span className="text-sm bg-gradient-to-r from-[#3b82f6] to-[#1e40af] bg-clip-text text-transparent"> [NOT AI GENERATED] </span> Hey, my name is <span className="text-sm text-foreground">Ahmad Sadiq</span>, in the generation where AI responds to AI through human conversations. Real connections and seeing peoples value has been fading. </p>
+      <p className="text-sm text-foreground text-muted leading-relaxed">
+      I was born in <span className="text-sm bg-gradient-to-r from-[#606c38] to-[#609f38] bg-clip-text text-transparent">Pakistan</span> and lived my whole life in <span className="text-sm bg-gradient-to-r from-[#d1d5db] to-[#800020] bg-clip-text text-transparent">Qatar</span>. Through these experiences, I’ve learned the beauty of every culture and background for the purpose of cherishing genuine moments. 
+      My Journey took me took a quick u-turn when I chose not to pursue Medical school in the UK and go to Boston University to study Computer Science. From there I've explored different industries as a software engineer from ecommerce -> startup -> robotics -> fintech. I've vastly enjoyed exploring and realized my passion relies in creating meaningful systems that scale with quality. Over the past two years, I’ve implemented numerous machine learning models, including RAG-based models and agentic AI models, to maximize the value of applications powered by AI.
       </p>
-      <p className="text-sm text-foreground leading-relaxed">
-        My journey led me to Boston University, where I graduated with a Bachelor of Arts in Computer Science. At BU, I channel my technical skills into cutting-edge projects—whether it's designing multi-agent systems or crafting AI-driven applications—that drive innovation and solve real-world problems.
+      <p className="text-sm text-foreground text-muted leading-relaxed">
+        I love <span className="text-sm text-foreground">football </span> (in other words 'soccer'), <span className="text-sm text-foreground">tennis</span>, and <span className="text-sm text-foreground">padel</span>.
       </p>
-      <p className="text-sm text-foreground leading-relaxed">
-        When I'm not immersed in code, debugging, or architecting efficient algorithms, you'll find me on the sports field. I'm an avid soccer player, enjoy a good match of tennis, and love padel.
+      <p className="text-sm text-foreground text-muted leading-relaxed">
+        I believe that technology should not only be about efficiency and performance but also about enhancing our daily lives with an engaging experiences.
       </p>
-      <p className="text-sm text-foreground leading-relaxed">
-        I believe that technology should not only be about efficiency and performance but also about enhancing our daily lives with fun and engaging experiences. Welcome to my portfolio – where innovation meets passion, and every line of code tells a story.
+      <p className="text-sm text-foreground text-muted leading-relaxed">
+        Currently at{' '}
+        <Link
+          href="/experience/iwm"
+          className="inline-flex items-end hover:opacity-80 transition-opacity"
+        >
+          <Image
+            src="/images/iwm.jpeg"
+            alt="IWM Logo"
+            width={20}
+            height={20}
+            className="rounded-sm"
+          />
+        </Link>
+        {' '}and producing {' '}
+        <Link
+          href="https://skansnetwork.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-end hover:opacity-80 transition-opacity"
+        >
+          <Image
+            src="/images/skans_logo_wite.png"
+            alt="Skans Logo"
+            width={20}
+            height={20}
+            className="rounded-sm"
+          />
+        </Link>
       </p>
     </div>
   );

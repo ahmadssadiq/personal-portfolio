@@ -7,7 +7,7 @@ const CredentialsSection = () => {
         / <span className="text-sm bg-gradient-to-r from-[#dc2626] to-[#fca5a5] bg-clip-text text-transparent">Boston University</span> Computer Science
       </p>
       <p className="m-0 text-sm font-normal text-muted">
-        / Available for opportunities
+        / Available for opportunities 
       </p>
     </div>
   );

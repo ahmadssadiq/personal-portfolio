@@ -43,9 +43,7 @@ const MainContent = ({ showTennis, setShowTennis, showPakistan, setShowPakistan,
         </Link>
         {' '}and producing {' '}
         <Link
-          href="https://skansnetwork.com"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="/news/transforming-skans-network"
           className="inline-flex items-end hover:opacity-80 transition-opacity"
         >
           <Image

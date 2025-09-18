@@ -30,6 +30,11 @@ export default function HomePage() {
                 className="object-cover rounded-lg w-full transition-all duration-300"
                 priority
               />
+              {showTennis && (
+                <p className="text-xs font-normal text-muted mt-2 text-center">
+                  this is me at Wimbeldon (Alcaraz vs Djocovic) 2023
+                </p>
+              )}
             </div>
           </div>
         </div>

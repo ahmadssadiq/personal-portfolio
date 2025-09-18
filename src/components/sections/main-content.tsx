@@ -12,7 +12,7 @@ const MainContent = () => {
       My Journey took me took a quick u-turn when I chose not to pursue Medical school in the UK and go to Boston University to study Computer Science. From there I've explored different industries as a software engineer from ecommerce {'->'} startup {'->'} robotics {'->'} fintech. I've vastly enjoyed exploring and realized my passion relies in creating meaningful systems that scale with quality. Over the past two years, I've implemented numerous machine learning models, including RAG-based models and agentic AI models, to maximize the value of applications powered by AI.
       </p>
       <p className="text-sm text-foreground text-muted leading-relaxed">
-        I love <span className="text-sm text-foreground">football </span> (in other words 'soccer'), <span className="text-sm text-foreground">tennis</span>, and <span className="text-sm text-foreground">padel</span>.
+        I love <span className="text-sm text-foreground">football </span> (in other words 'soccer'), <Link href="/tennis" className="text-sm text-foreground hover:underline cursor-pointer">tennis</Link>, and <span className="text-sm text-foreground">padel</span>.
       </p>
       <p className="text-sm text-foreground text-muted leading-relaxed">
         I believe that technology should not only be about efficiency and performance but also about enhancing our daily lives with an engaging experiences.

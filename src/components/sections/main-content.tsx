@@ -20,9 +20,9 @@ const MainContent = ({ showTennis, setShowTennis }: MainContentProps) => {
       <p className={`text-sm leading-relaxed transition-colors duration-300 ${showTennis ? 'text-gray-400' : 'text-foreground text-muted'}`}>
         I love <span className="text-sm text-foreground">football </span> (in other words 'soccer'), <button onClick={() => setShowTennis(!showTennis)} className={`text-sm hover:underline cursor-pointer transition-colors duration-300 ${showTennis ? 'text-green-500' : 'text-foreground'}`}>tennis</button>, and <span className="text-sm text-foreground">padel</span>.
       </p>
-      <p className={`text-sm leading-relaxed transition-colors duration-300 ${showTennis ? 'text-gray-400' : 'text-foreground text-muted'}`}>
+      {/* <p className={`text-sm leading-relaxed transition-colors duration-300 ${showTennis ? 'text-gray-400' : 'text-foreground text-muted'}`}>
         I believe that technology should not only be about efficiency and performance but also about enhancing our daily lives with engaging experiences.
-      </p>
+      </p> */}
       <p className={`text-sm leading-relaxed transition-colors duration-300 ${showTennis ? 'text-gray-400' : 'text-foreground text-muted'}`}>
         Currently at{' '}
         <Link

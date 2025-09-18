@@ -21,7 +21,22 @@ export default function NewsPage() {
               <h1 className="text-xl font-medium text-foreground mb-6">Blog Posts</h1>
               
               <div className="space-y-6">
-                {/* Blog Post */}
+                {/* Blog Post 1 */}
+                <div className="pb-6">
+                  <h2 className="text-base font-medium text-foreground mb-2">From Final Round Ghosting to Transforming My Father's Network</h2>
+                  <p className="text-sm text-muted mb-3">August 2025 - September 2025</p>
+                  <p className="text-sm text-foreground leading-relaxed mb-4">
+                    After being ghosted in final rounds, I channeled that energy into transforming my father's traditional business network into Skans Network - a modern digital platform that bridges traditional networking with modern technology.
+                  </p>
+                  <Link 
+                    href="/news/transforming-skans-network" 
+                    className="text-sm font-medium text-foreground underline hover:text-link-hover"
+                  >
+                    Read More
+                  </Link>
+                </div>
+
+                {/* Blog Post 2 */}
                 <div className="pb-6">
                   <h2 className="text-base font-medium text-foreground mb-2">From Qatar to Boston: A Software Engineer's Journey</h2>
                   <p className="text-sm text-muted mb-3">December 28, 2024</p>

@@ -55,7 +55,7 @@ export default function Navigation() {
               : 'text-muted hover:text-link-hover'
           }`}
         >
-          News
+          Blogs
         </Link>
       </nav>
     </div>

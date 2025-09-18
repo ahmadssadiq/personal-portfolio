@@ -9,6 +9,9 @@ import { useState } from "react";
 
 export default function HomePage() {
   const [showTennis, setShowTennis] = useState(false);
+  const [showPakistan, setShowPakistan] = useState(false);
+  const [showQatar, setShowQatar] = useState(false);
+  const [showBoston, setShowBoston] = useState(false);
   return (
     <div className="min-h-screen bg-white">
       <div className="container py-4 md:py-12">
@@ -17,13 +20,33 @@ export default function HomePage() {
             <Navigation />
           </div>
           <div className="w-full md:w-[500px] pt-4 md:pt-12 min-w-0">
-            <MainContent showTennis={showTennis} setShowTennis={setShowTennis} />
-            <CredentialsSection showTennis={showTennis} />
+            <MainContent 
+              showTennis={showTennis} 
+              setShowTennis={setShowTennis}
+              showPakistan={showPakistan}
+              setShowPakistan={setShowPakistan}
+              showQatar={showQatar}
+              setShowQatar={setShowQatar}
+            />
+                   <CredentialsSection 
+                     showTennis={showTennis} 
+                     showBoston={showBoston}
+                     setShowBoston={setShowBoston}
+                     setShowTennis={setShowTennis}
+                     setShowPakistan={setShowPakistan}
+                     setShowQatar={setShowQatar}
+                   />
           </div>
           <div className="w-full md:w-[300px] md:flex-shrink-0 pt-4 md:pt-12">
             <div className="relative w-full max-w-[300px] mx-auto md:max-w-none md:mx-0">
               <Image
-                src={showTennis ? "/images/wimbeldon.jpeg" : "/images/profile.jpg"}
+                src={
+                  showTennis ? "/images/wimbeldon.jpeg" :
+                  showPakistan ? "/images/pakistan.JPG" :
+                  showQatar ? "/images/qatar.png" :
+                  showBoston ? "/images/Boston_University.JPG" :
+                  "/images/profile.jpg"
+                }
                 alt="Ahmad Sadiq"
                 width={300}
                 height={400}
@@ -33,6 +56,21 @@ export default function HomePage() {
               {showTennis && (
                 <p className="text-xs font-normal text-muted mt-2 text-center">
                   this is me at Wimbeldon (Alcaraz vs Djocovic) 2023
+                </p>
+              )}
+              {showPakistan && (
+                <p className="text-xs font-normal text-muted mt-2 text-center">
+                  Friends wedding in Pakistan
+                </p>
+              )}
+              {showQatar && (
+                <p className="text-xs font-normal text-muted mt-2 text-center">
+                  Family time in Qatar
+                </p>
+              )}
+              {showBoston && (
+                <p className="text-xs font-normal text-muted mt-2 text-center">
+                  Boston University graduation with friends
                 </p>
               )}
             </div>

@@ -1,8 +1,59 @@
+'use client';
+
 import Navigation from '@/components/sections/navigation';
 import Footer from '@/components/sections/footer';
 import Image from 'next/image';
+import { useState } from 'react';
 
 export default function AboutPage() {
+  const [gameState, setGameState] = useState({
+    isPlaying: true, // Start playing immediately
+    currentGuess: null as number | null,
+    correctAnswers: [1], // Only the smallest kid with glasses (center-left) is correct
+    guessedFaces: [] as number[],
+    gameComplete: false
+  });
+
+  const facePositions = [
+    { id: 0, name: 'Person 1', x: 30, y: 35 }, // Far left - red shirt (moved right)
+    { id: 1, name: 'Ahmad (smallest with glasses)', x: 48, y: 50 }, // Center-left - plaid shirt, glasses (moved right and down)
+    { id: 2, name: 'Person 3', x: 50, y: 20 }, // Center-right - dark blue shirt (same x as 2nd, moved up)
+    { id: 3, name: 'Person 4', x: 70, y: 35 } // Far right - red shirt (unchanged)
+  ];
+
+  const startGame = () => {
+    setGameState({
+      isPlaying: true,
+      currentGuess: null,
+      correctAnswers: [1], // Only Ahmad (smallest with glasses) is correct
+      guessedFaces: [],
+      gameComplete: false
+    });
+  };
+
+  const makeGuess = (faceId: number) => {
+    if (!gameState.isPlaying || gameState.guessedFaces.includes(faceId)) return;
+    
+    const isCorrect = gameState.correctAnswers.includes(faceId);
+    const newGuessedFaces = [...gameState.guessedFaces, faceId];
+    
+    setGameState(prev => ({
+      ...prev,
+      currentGuess: faceId,
+      guessedFaces: newGuessedFaces,
+      gameComplete: newGuessedFaces.length === 4
+    }));
+  };
+
+  const resetGame = () => {
+    setGameState({
+      isPlaying: false,
+      currentGuess: null,
+      correctAnswers: [1], // Only Ahmad (smallest with glasses) is correct
+      guessedFaces: [],
+      gameComplete: false
+    });
+  };
   return (
     <div className="min-h-screen bg-white">
       {/* Main container follows exact layout margins and width */}
@@ -180,13 +231,60 @@ export default function AboutPage() {
           {/* Right Column - Personal Images */}
           <div className="w-full md:w-[300px] md:flex-shrink-0 pt-6 md:pt-12">
             <div className="space-y-6 w-full max-w-[300px] mx-auto md:max-w-none md:mx-0">
-              <Image
-                src="/images/family.jpeg"
-                alt="Ahmad Sadiq - Family"
-                width={300}
-                height={300}
-                className="object-cover rounded-lg w-full"
-              />
+              <div className="relative">
+                <Image
+                  src="/images/family.jpeg"
+                  alt="Ahmad Sadiq - Family"
+                  width={300}
+                  height={300}
+                  className="object-cover rounded-lg w-full"
+                />
+                
+
+                {/* Interactive Face Circles */}
+                {gameState.isPlaying && !gameState.guessedFaces.includes(1) && facePositions.map((face) => {
+                  const isGuessed = gameState.guessedFaces.includes(face.id);
+                  const isCorrect = gameState.correctAnswers.includes(face.id);
+                  const isCurrentGuess = gameState.currentGuess === face.id;
+                  
+                  let circleColor = 'border-white border-dashed';
+                  if (isGuessed) {
+                    circleColor = isCorrect ? 'border-green-500 bg-green-500 bg-opacity-20' : 'border-red-500 bg-red-500 bg-opacity-20';
+                  }
+                  
+                  return (
+                    <div
+                      key={face.id}
+                      className={`absolute w-12 h-12 rounded-full border-2 ${circleColor} cursor-pointer transition-all duration-300 hover:scale-110`}
+                      style={{
+                        left: `${face.x}%`,
+                        top: `${face.y}%`,
+                        transform: 'translate(-50%, -50%)'
+                      }}
+                      onClick={() => makeGuess(face.id)}
+                      title={isGuessed ? (isCorrect ? `Correct! This is ${face.name}` : `Wrong! This is ${face.name}`) : `Click to guess: ${face.name}`}
+                    >
+                      {isGuessed && (
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <span className="text-xs font-bold text-white">
+                            {isCorrect ? '✓' : '✗'}
+                          </span>
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+              
+              {/* Game Status */}
+              <div className="text-center">
+                <p className="text-sm text-muted">
+                  {gameState.guessedFaces.includes(1) ? 
+                    "you like my glasses :)" : 
+                    "Click on the dotted circles to guess who I am."
+                  }
+                </p>
+              </div>
             </div>
           </div>
         </div>

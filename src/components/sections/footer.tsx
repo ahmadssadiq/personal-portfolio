@@ -9,7 +9,7 @@ const Footer = () => {
         </p>
         <div className="flex items-center gap-6">
           <a
-            href="/images/Ahmad_Sadiq_Resume_jan29.pdf"
+            href="/images/Ahmad_Sadiq_Resume_.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm font-normal text-muted hover:text-link-hover"

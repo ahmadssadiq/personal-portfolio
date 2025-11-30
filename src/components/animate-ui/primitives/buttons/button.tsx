@@ -6,7 +6,8 @@ import { motion, type HTMLMotionProps } from 'motion/react';
 import { Slot, type WithAsChild } from '@/components/animate-ui/primitives/animate/slot';
 
 type ButtonProps = WithAsChild<
-  HTMLMotionProps<'button'> & {
+  Omit<HTMLMotionProps<'button'>, 'children'> & {
+    children?: React.ReactNode;
     hoverScale?: number;
     tapScale?: number;
   }

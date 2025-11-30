@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export default function IWMPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       {/* Main container follows exact layout margins and width */}
       <div className="container py-6 md:py-12">
         {/* Mobile: Stack vertically, Desktop: Horizontal layout */}

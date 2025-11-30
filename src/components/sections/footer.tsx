@@ -1,4 +1,9 @@
+'use client';
+
 import React from 'react';
+import {
+  ThemeTogglerButton,
+} from '@/components/animate-ui/components/buttons/theme-toggler';
 
 const Footer = () => {
   return (
@@ -8,6 +13,12 @@ const Footer = () => {
           Currently: NY
         </p>
         <div className="flex items-center gap-6">
+          <ThemeTogglerButton
+            variant="ghost"
+            size="sm"
+            modes={['light', 'dark']}
+            direction="ltr"
+          />
           <a
             href="/images/Ahmad_Sadiq_Resume_.pdf"
             target="_blank"

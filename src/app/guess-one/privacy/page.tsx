@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function GuessOnePrivacyPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       <div className="container py-6 md:py-12">
         <div className="flex flex-col md:flex-row gap-6 md:gap-[60px] min-w-0">
           {/* Left Column - Navigation */}

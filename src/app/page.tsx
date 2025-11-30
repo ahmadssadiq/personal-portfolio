@@ -13,7 +13,7 @@ export default function HomePage() {
   const [showQatar, setShowQatar] = useState(false);
   const [showBoston, setShowBoston] = useState(false);
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       <div className="container py-4 md:py-12">
         <div className="flex flex-col md:flex-row gap-4 md:gap-[60px] min-w-0">
           <div className="w-full md:w-[200px] md:flex-shrink-0 pt-4 md:pt-12">

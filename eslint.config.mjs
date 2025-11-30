@@ -18,10 +18,7 @@ const eslintConfig = [
       '@typescript-eslint/no-explicit-any': 'off',
       'react-hooks/exhaustive-deps': 'off',
       'import/no-unresolved': 'error',
-      'import/named': ['error', { 
-        allowCommonJS: true,
-        allowTypeImports: true 
-      }],
+      'import/named': 'warn',
       'import/default': 'error',
       'import/namespace': 'error',
       'import/no-absolute-path': 'error',

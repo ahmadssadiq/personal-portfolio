@@ -62,20 +62,23 @@ function Slot<T extends HTMLElement = HTMLElement>({
   ref,
   ...props
 }: SlotProps<T>) {
-  if (!React.isValidElement(children)) return null;
+  const isValid = React.isValidElement(children);
+  const childType = isValid && React.isValidElement(children) ? children.type : null;
+  
+  const Base = React.useMemo(() => {
+    if (!isValid || !childType) return motion.div;
+    
+    const isAlreadyMotion =
+      typeof childType === 'object' &&
+      childType !== null &&
+      isMotionComponent(childType);
+    
+    return isAlreadyMotion
+      ? (childType as React.ElementType)
+      : motion.create(childType as React.ElementType);
+  }, [isValid, childType]);
 
-  const isAlreadyMotion =
-    typeof children.type === 'object' &&
-    children.type !== null &&
-    isMotionComponent(children.type);
-
-  const Base = React.useMemo(
-    () =>
-      isAlreadyMotion
-        ? (children.type as React.ElementType)
-        : motion.create(children.type as React.ElementType),
-    [isAlreadyMotion, children.type],
-  );
+  if (!isValid || !children) return null;
 
   const { ref: childRef, ...childProps } = children.props as AnyProps;
 

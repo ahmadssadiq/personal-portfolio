@@ -2,62 +2,104 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { motion } from 'motion/react';
+import { PixelHeading } from '@/components/ui/pixel-heading-character';
+
+// Shared stagger container used by the nav list
+const navContainerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      // Start children after a short pause so the page content also has
+      // a moment to begin its own entry animation
+      delayChildren: 0.05,
+      staggerChildren: 0.06,
+    },
+  },
+};
+
+const navItemVariants = {
+  hidden:  { opacity: 0, y: 6 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.3,
+      ease: [0.25, 0.1, 0.25, 1] as [number, number, number, number] as [number, number, number, number],
+    },
+  },
+};
+
+const nameVariants = {
+  hidden:  { opacity: 0, y: 4 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.35,
+      ease: [0.25, 0.1, 0.25, 1] as [number, number, number, number] as [number, number, number, number],
+    },
+  },
+};
 
 export default function Navigation() {
   const pathname = usePathname();
 
   const isActive = (path: string) => {
-    if (path === '/') {
-      return pathname === '/';
-    }
+    if (path === '/') return pathname === '/';
     return pathname.startsWith(path);
   };
 
+  const links: { href: string; label: string }[] = [
+    { href: '/',        label: 'Home'        },
+    { href: '/about',   label: 'Experiences' },
+    { href: '/projects',label: 'Projects'    },
+    { href: '/news',    label: 'Blogs'       },
+  ];
+
   return (
     <div>
-      <p className="mb-4 md:mb-6 text-xs md:text-sm font-normal text-muted">Ahmad Sadiq</p>
-      <nav className="flex flex-row md:flex-col gap-3 md:gap-2 overflow-x-auto md:overflow-x-visible">
-        <Link
-          href="/"
-          className={`text-xs md:text-sm font-medium whitespace-nowrap transition-colors ${
-            isActive('/') 
-              ? 'bg-gradient-to-r from-[#606c38] to-[#fefae0] bg-clip-text text-transparent' 
-              : 'text-muted hover:text-link-hover'
-          }`}
+      <motion.div
+        className="mb-4 md:mb-6 h-5 overflow-hidden"
+        variants={nameVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        <PixelHeading
+          as="h2"
+          mode="wave"
+          autoPlay={true}
+          showLabel={false}
+          cycleInterval={340}
+          staggerDelay={200}
+          defaultFontIndex={3}
+          className="text-sm tracking-tight text-foreground cursor-pointer select-none leading-none"
         >
-          Home
-        </Link>
-        <Link
-          href="/about"
-          className={`text-xs md:text-sm font-medium whitespace-nowrap transition-colors ${
-            isActive('/about') 
-              ? 'bg-gradient-to-r from-[#606c38] to-[#fefae0] bg-clip-text text-transparent' 
-              : 'text-muted hover:text-link-hover'
-          }`}
-        >
-          Experiences
-        </Link>
-        <Link
-          href="/projects"
-          className={`text-xs md:text-sm font-medium whitespace-nowrap transition-colors ${
-            isActive('/projects') 
-              ? 'bg-gradient-to-r from-[#606c38] to-[#fefae0] bg-clip-text text-transparent' 
-              : 'text-muted hover:text-link-hover'
-          }`}
-        >
-          Projects
-        </Link>
-        <Link
-          href="/news"
-          className={`text-xs md:text-sm font-medium whitespace-nowrap transition-colors ${
-            isActive('/news') 
-              ? 'bg-gradient-to-r from-[#606c38] to-[#fefae0] bg-clip-text text-transparent' 
-              : 'text-muted hover:text-link-hover'
-          }`}
-        >
-          Blogs
-        </Link>
-      </nav>
+          Ahmad Sadiq
+        </PixelHeading>
+      </motion.div>
+
+      <motion.nav
+        className="flex flex-row md:flex-col gap-3 md:gap-2 overflow-x-auto md:overflow-x-visible"
+        variants={navContainerVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        {links.map(({ href, label }) => (
+          <motion.div key={href} variants={navItemVariants}>
+            <Link
+              href={href}
+              className={`text-xs md:text-sm font-medium whitespace-nowrap transition-colors duration-200 ${
+                isActive(href)
+                  ? 'bg-gradient-to-r from-[#606c38] to-[#fefae0] bg-clip-text text-transparent'
+                  : 'text-muted hover:text-link-hover'
+              }`}
+            >
+              {label}
+            </Link>
+          </motion.div>
+        ))}
+      </motion.nav>
     </div>
   );
 }

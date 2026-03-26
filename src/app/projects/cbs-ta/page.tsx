@@ -2,6 +2,7 @@ import Navigation from '@/components/sections/navigation';
 import Footer from '@/components/sections/footer';
 import Link from 'next/link';
 import Image from 'next/image';
+import { ProgressiveBlur } from '@/components/ui/progressive-blur';
 
 export default function CBS_TAPage() {
   return (
@@ -102,6 +103,10 @@ export default function CBS_TAPage() {
         </div>
       </div>
       
+      {/* Progressive blur — fixed to viewport bottom */}
+      <div className="fixed bottom-0 left-0 right-0 h-24 z-10 pointer-events-none">
+        <ProgressiveBlur height="100%" position="bottom" />
+      </div>
       {/* Footer spans full width */}
       <Footer />
     </div>

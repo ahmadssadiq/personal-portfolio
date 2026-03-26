@@ -1,5 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import {
+  GeistPixelSquare,
+  GeistPixelGrid,
+  GeistPixelCircle,
+  GeistPixelTriangle,
+  GeistPixelLine,
+} from "geist/font/pixel";
 import VisualEditsMessenger from "../visual-edits/VisualEditsMessenger";
 import ErrorReporter from "@/components/ErrorReporter";
 import Script from "next/script";
@@ -39,7 +46,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png" />
         <link rel="apple-touch-icon" href="/favicon-32x32.png" />
       </head>
-      <body className="antialiased">
+      <body className={`antialiased ${GeistPixelSquare.variable} ${GeistPixelGrid.variable} ${GeistPixelCircle.variable} ${GeistPixelTriangle.variable} ${GeistPixelLine.variable}`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="light"

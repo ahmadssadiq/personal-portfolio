@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
+import { Resend } from 'resend';
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: NextRequest) {
   try {
@@ -18,31 +20,15 @@ export async function POST(req: NextRequest) {
       ? senderEmail.replace(/</g, '&lt;').replace(/>/g, '&gt;')
       : null;
 
-    const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST || 'smtp-mail.outlook.com',
-      port: Number(process.env.SMTP_PORT) || 587,
-      secure: false,
-      auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
-      },
-      tls: { ciphers: 'SSLv3' },
-    });
-
     const subject = senderEmail
       ? `Portfolio message from ${senderName} <${senderEmail}>`
       : `Portfolio message from ${senderName}`;
 
-    const replyTo = senderEmail
-      ? `${senderName} <${senderEmail}>`
-      : undefined;
-
-    await transporter.sendMail({
-      from: process.env.SMTP_USER,
+    await resend.emails.send({
+      from: 'Portfolio Contact <onboarding@resend.dev>',
       to: process.env.CONTACT_TO || 'asadiq456@outlook.com',
-      replyTo,
+      replyTo: senderEmail ? `${senderName} <${senderEmail}>` : undefined,
       subject,
-      text: `From: ${senderName}${senderEmail ? ` <${senderEmail}>` : ''}\n\n${message}`,
       html: `
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 24px;">
           <h2 style="color: #000; margin-bottom: 20px; font-size: 18px;">New message from your portfolio</h2>

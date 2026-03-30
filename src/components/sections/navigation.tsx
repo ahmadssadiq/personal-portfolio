@@ -60,7 +60,7 @@ export default function Navigation() {
   return (
     <div>
       <motion.div
-        className="mb-4 md:mb-6 h-5 overflow-hidden"
+        className="mb-4 md:mb-6 h-8 overflow-hidden"
         variants={nameVariants}
         initial="hidden"
         animate="visible"
@@ -73,7 +73,7 @@ export default function Navigation() {
           cycleInterval={340}
           staggerDelay={200}
           defaultFontIndex={3}
-          className="text-sm tracking-tight text-foreground cursor-pointer select-none leading-none"
+          className="text-xl tracking-tight text-foreground cursor-pointer select-none leading-none"
         >
           Ahmad Sadiq
         </PixelHeading>

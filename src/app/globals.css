@@ -381,6 +381,17 @@
   }
 }
 
+/* ─── Pixel font utilities ───────────────────────────────────────── */
+/* Applied dynamically in JS arrays — explicit rules ensure Tailwind  */
+/* scanner doesn't miss them and var() chain resolves at runtime.     */
+@layer utilities {
+  .font-pixel-square   { font-family: var(--font-geist-pixel-square,   monospace); }
+  .font-pixel-grid     { font-family: var(--font-geist-pixel-grid,     monospace); }
+  .font-pixel-circle   { font-family: var(--font-geist-pixel-circle,   monospace); }
+  .font-pixel-triangle { font-family: var(--font-geist-pixel-triangle, monospace); }
+  .font-pixel-line     { font-family: var(--font-geist-pixel-line,     monospace); }
+}
+
 /* Hide Next.js error overlay portal */
 nextjs-portal {
   display: none !important;

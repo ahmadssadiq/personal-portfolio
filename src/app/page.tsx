@@ -47,7 +47,7 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-background page-root">
-      <div className="container py-4 md:py-12">
+      <div className="container pt-4 pb-4 md:pt-12 md:pb-0">
         <div className="flex flex-col md:flex-row gap-4 md:gap-[60px] min-w-0">
           <motion.div
             className="w-full md:w-[200px] md:flex-shrink-0 pt-4 md:pt-12"

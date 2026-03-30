@@ -7,6 +7,7 @@ import {
 } from '@/components/animate-ui/components/buttons/theme-toggler';
 import { MorphSurface } from '@/components/ui/morph-surface';
 import { FooterCrowd } from '@/components/ui/crowd-canvas';
+import SquigglyArrow from '@/components/ui/squiggle-arrow';
 
 const footerVariants = {
   hidden: { opacity: 0, y: 6 },
@@ -154,86 +155,107 @@ const Footer = () => {
 
   return (
     <motion.footer
-      className="relative w-full overflow-hidden"
+      className="relative w-full"
       variants={footerVariants}
       initial="hidden"
       animate="visible"
     >
-      {/* Footer block — animation is the background, links float on top */}
-      <div className="relative w-full h-52">
+      {/* Crowd canvas background — reveals on hover, sits behind links */}
+      <AnimatePresence>
+        {locationHovered && (
+          <motion.div
+            className="absolute inset-0 z-0"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+          >
+            <FooterCrowd />
+          </motion.div>
+        )}
+      </AnimatePresence>
 
-        {/* Crowd canvas background — reveals on hover */}
-        <AnimatePresence>
-          {locationHovered && (
-            <motion.div
-              className="absolute inset-0"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
-            >
-              <FooterCrowd />
-            </motion.div>
-          )}
-        </AnimatePresence>
-
-        {/* Links — pinned to bottom of the animation zone, always on top */}
-        <div className="absolute bottom-0 left-0 right-0 z-10">
-          <div className="container py-6 flex justify-between items-center">
-            <p
-              className="text-sm font-normal text-muted cursor-default select-none leading-none m-0"
-              onMouseEnter={() => setLocationHovered(true)}
-              onMouseLeave={() => setLocationHovered(false)}
-            >
-              Currently: NY
-            </p>
-            <motion.div
-              className="flex items-center gap-6 leading-none"
-              variants={linksContainerVariants}
-              initial="hidden"
-              animate="visible"
-            >
-              <motion.div variants={linkVariants}>
-                <ThemeTogglerButton
-                  variant="ghost"
-                  size="sm"
-                  modes={['light', 'dark']}
-                  direction="ltr"
+      {/* Links row — normal flow, always visible */}
+      <div className="relative z-10 container py-4 md:py-12 flex justify-between items-center">
+        <div className="flex items-center gap-1.5">
+          <p
+            className="text-sm font-normal text-muted cursor-default select-none leading-none m-0"
+            onMouseEnter={() => setLocationHovered(true)}
+            onMouseLeave={() => setLocationHovered(false)}
+            onTouchStart={() => setLocationHovered(true)}
+            onTouchEnd={() => setLocationHovered(false)}
+          >
+            Currently: NY
+          </p>
+          <AnimatePresence>
+            {!locationHovered && (
+              <motion.div
+                initial={{ opacity: 0, x: 6 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 6 }}
+                transition={{ duration: 0.3, delay: 1.5 }}
+                className="flex items-center pointer-events-none"
+                style={{ color: '#a855f7' }}
+              >
+                <SquigglyArrow
+                  variant="bouncy"
+                  direction="left"
+                  width={44}
+                  height={22}
+                  strokeWidth={1.8}
                 />
+                <span style={{ fontSize: 9, lineHeight: 1, marginLeft: 2, color: '#a855f7' }}>
+                  <span className="hidden sm:inline">hover</span>
+                  <span className="sm:hidden">tap</span>
+                </span>
               </motion.div>
-              {/* ContactForm — button hidden, form logic preserved for future use */}
-              <ContactForm />
-              <motion.a
-                variants={linkVariants}
-                href="/images/ahmad_sadiq.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm font-normal text-muted hover:text-link-hover transition-colors duration-200 leading-none"
-              >
-                Resume
-              </motion.a>
-              <motion.a
-                variants={linkVariants}
-                href="https://www.linkedin.com/in/ahmadssadiq"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm font-normal text-muted hover:text-link-hover transition-colors duration-200 leading-none"
-              >
-                LinkedIn
-              </motion.a>
-              <motion.a
-                variants={linkVariants}
-                href="https://www.github.com/ahmadssadiq"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm font-normal text-muted hover:text-link-hover transition-colors duration-200 leading-none"
-              >
-                GitHub
-              </motion.a>
-            </motion.div>
-          </div>
+            )}
+          </AnimatePresence>
         </div>
-
+        <motion.div
+          className="flex items-center gap-6 leading-none"
+          variants={linksContainerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <motion.div variants={linkVariants}>
+            <ThemeTogglerButton
+              variant="ghost"
+              size="sm"
+              modes={['light', 'dark']}
+              direction="ltr"
+            />
+          </motion.div>
+          {/* ContactForm — button hidden, form logic preserved for future use */}
+          <ContactForm />
+          <motion.a
+            variants={linkVariants}
+            href="/images/ahmad_sadiq.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm font-normal text-muted hover:text-link-hover transition-colors duration-200 leading-none"
+          >
+            Resume
+          </motion.a>
+          <motion.a
+            variants={linkVariants}
+            href="https://www.linkedin.com/in/ahmadssadiq"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm font-normal text-muted hover:text-link-hover transition-colors duration-200 leading-none"
+          >
+            LinkedIn
+          </motion.a>
+          <motion.a
+            variants={linkVariants}
+            href="https://www.github.com/ahmadssadiq"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm font-normal text-muted hover:text-link-hover transition-colors duration-200 leading-none"
+          >
+            GitHub
+          </motion.a>
+        </motion.div>
       </div>
     </motion.footer>
   );

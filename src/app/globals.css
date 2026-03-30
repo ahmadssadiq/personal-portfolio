@@ -392,6 +392,11 @@
   .font-pixel-line     { font-family: var(--font-geist-pixel-line,     monospace); }
 }
 
+/* Footer hint responsive labels — explicit to avoid Tailwind v4 scanner miss */
+@media (min-width: 640px) { .sm\:hidden  { display: none !important; } }
+.sm\:inline { display: inline; }
+@media (max-width: 639px) { .sm\:inline { display: none !important; } }
+
 /* Hide Next.js error overlay portal */
 nextjs-portal {
   display: none !important;

@@ -4,7 +4,7 @@ import Navigation from "@/components/sections/navigation";
 import MainContent from "@/components/sections/main-content";
 import CredentialsSection from "@/components/sections/credentials";
 import Footer from "@/components/sections/footer";
-import Image from "next/image";
+import { StampPhoto } from "@/components/ui/stamp-photo";
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 
@@ -30,6 +30,13 @@ const captions: Record<string, string> = {
   '/images/Boston_University.JPG': 'Boston University graduation with friends',
 };
 
+const stampLabels: Record<string, string> = {
+  '/images/wimbeldon.jpeg':      'Wimbledon',
+  '/images/pakistan.JPG':        'Pakistan',
+  '/images/qatar.png':           'Qatar',
+  '/images/Boston_University.JPG': 'Boston',
+};
+
 export default function HomePage() {
   const [showTennis, setShowTennis] = useState(false);
   const [showPakistan, setShowPakistan] = useState(false);
@@ -46,8 +53,8 @@ export default function HomePage() {
   const caption = captions[imageSrc];
 
   return (
-    <div className="min-h-screen bg-background page-root">
-      <div className="container pt-4 pb-4 md:pt-12 md:pb-0">
+    <div className="min-h-screen bg-background page-root flex flex-col">
+      <div className="container pt-4 pb-4 md:pt-12 md:pb-0 flex-1">
         <div className="flex flex-col md:flex-row gap-4 md:gap-[60px] min-w-0">
           <motion.div
             className="w-full md:w-[200px] md:flex-shrink-0 pt-4 md:pt-12"
@@ -98,12 +105,10 @@ export default function HomePage() {
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.35, ease: [0.25, 0.1, 0.25, 1] as [number, number, number, number] }}
                 >
-                  <Image
+                  <StampPhoto
                     src={imageSrc}
                     alt="Ahmad Sadiq"
-                    width={300}
-                    height={400}
-                    className="object-cover rounded-lg w-full"
+                    label={stampLabels[imageSrc]}
                     priority
                   />
                 </motion.div>

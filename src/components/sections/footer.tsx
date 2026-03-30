@@ -155,12 +155,12 @@ const Footer = () => {
 
   return (
     <motion.footer
-      className="relative w-full"
+      className="relative w-full mt-auto"
       variants={footerVariants}
       initial="hidden"
       animate="visible"
     >
-      {/* Crowd canvas background — reveals on hover, sits behind links */}
+      {/* Crowd canvas background — reveals on hover, extends 80px upward to cover page gap */}
       <AnimatePresence>
         {locationHovered && (
           <motion.div

@@ -101,7 +101,7 @@ const projects = [
 
 export default function ProjectsPage() {
   return (
-    <div className="min-h-screen bg-background page-root">
+    <div className="min-h-screen bg-background page-root flex flex-col">
       <div className="container py-6 md:py-12">
         <div className="flex flex-col md:flex-row gap-6 md:gap-[60px] min-w-0">
 

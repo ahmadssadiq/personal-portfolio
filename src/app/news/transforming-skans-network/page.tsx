@@ -6,7 +6,7 @@ import { ProgressiveBlur } from '@/components/ui/progressive-blur';
 
 export default function SkansNetworkBlogPost() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background flex flex-col">
       <div className="container py-6 md:py-12">
         <div className="flex flex-col md:flex-row gap-6 md:gap-[60px] min-w-0">
           {/* Left Column - Navigation */}

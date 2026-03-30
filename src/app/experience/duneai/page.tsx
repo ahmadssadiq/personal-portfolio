@@ -6,7 +6,7 @@ import { ProgressiveBlur } from '@/components/ui/progressive-blur';
 
 export default function DuneAIPage() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background flex flex-col">
       {/* Main container follows exact layout margins and width */}
       <div className="container py-6 md:py-12">
         {/* Mobile: Stack vertically, Desktop: Horizontal layout */}

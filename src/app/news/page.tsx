@@ -28,7 +28,7 @@ const rightColumnVariants = {
 
 export default function NewsPage() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background flex flex-col">
       <div className="container py-6 md:py-12">
         <div className="flex flex-col md:flex-row gap-6 md:gap-[60px] min-w-0">
           <div className="w-full md:w-[200px] md:flex-shrink-0 pt-6 md:pt-12">

@@ -17,6 +17,8 @@ interface MainContentProps {
   setShowPakistan: (show: boolean) => void;
   showQatar: boolean;
   setShowQatar: (show: boolean) => void;
+  showRobot: boolean;
+  setShowRobot: (show: boolean) => void;
 }
 
 // Each paragraph slides up and fades in; stagger is owned by the parent
@@ -49,8 +51,10 @@ const MainContent = ({
   setShowPakistan,
   showQatar,
   setShowQatar,
+  showRobot,
+  setShowRobot,
 }: MainContentProps) => {
-  const dimmed = showTennis || showPakistan || showQatar;
+  const dimmed = showTennis || showPakistan || showQatar || showRobot;
   const baseClass = `text-sm leading-relaxed transition-colors duration-300 ${
     dimmed ? 'text-muted opacity-60' : 'text-foreground'
   }`;
@@ -76,6 +80,7 @@ const MainContent = ({
             setShowPakistan(!showPakistan);
             setShowQatar(false);
             setShowTennis(false);
+            setShowRobot(false);
           }}
           className={`text-sm transition-all duration-300 ${
             showPakistan
@@ -92,6 +97,7 @@ const MainContent = ({
             setShowQatar(!showQatar);
             setShowPakistan(false);
             setShowTennis(false);
+            setShowRobot(false);
           }}
           className={`text-sm transition-all duration-300 ${
             showQatar
@@ -113,7 +119,25 @@ const MainContent = ({
         graduated in May 2025, and now I&apos;m a first-year MS student in
         Mechatronics &amp; Robotics at NYU Tandon. Along the way I explored
         different industries as a software engineer from
-        ecommerce → startup → robotics → fintech. I&apos;ve vastly enjoyed
+        ecommerce → startup →{' '}
+        <button
+          onClick={() => {
+            setShowRobot(!showRobot);
+            setShowPakistan(false);
+            setShowQatar(false);
+            setShowTennis(false);
+          }}
+          aria-pressed={showRobot}
+          className={`text-sm cursor-pointer transition-colors duration-300 ${
+            showRobot
+              ? 'text-green-500'
+              : 'bg-gradient-to-r from-[#ea580c] to-[#fdba74] bg-clip-text text-transparent'
+          }`}
+          style={{ fontSize: 'inherit' }}
+        >
+          robotics
+        </button>{' '}
+        → fintech. I&apos;ve vastly enjoyed
         exploring and realized my passion relies in creating meaningful systems
         that scale with quality. Over the past two years, I&apos;ve implemented
         numerous machine learning models, including RAG-based models and agentic
@@ -128,6 +152,7 @@ const MainContent = ({
             setShowTennis(!showTennis);
             setShowPakistan(false);
             setShowQatar(false);
+            setShowRobot(false);
           }}
           className={`text-sm hover:underline cursor-pointer transition-colors duration-300 ${
             showTennis ? 'text-green-500' : 'text-foreground'

@@ -10,6 +10,7 @@ interface CredentialsSectionProps {
   setShowTennis: (show: boolean) => void;
   setShowPakistan: (show: boolean) => void;
   setShowQatar: (show: boolean) => void;
+  setShowRobot: (show: boolean) => void;
 }
 
 const credentialVariants = {
@@ -42,6 +43,7 @@ const CredentialsSection = ({
   setShowTennis,
   setShowPakistan,
   setShowQatar,
+  setShowRobot,
 }: CredentialsSectionProps) => {
   const dimmed = showTennis || showBoston;
 
@@ -78,6 +80,7 @@ const CredentialsSection = ({
             setShowTennis(false);
             setShowPakistan(false);
             setShowQatar(false);
+            setShowRobot(false);
           }}
           className={`text-sm transition-all duration-300 ${
             showBoston

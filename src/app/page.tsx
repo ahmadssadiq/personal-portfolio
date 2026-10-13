@@ -5,6 +5,7 @@ import MainContent from "@/components/sections/main-content";
 import CredentialsSection from "@/components/sections/credentials";
 import Footer from "@/components/sections/footer";
 import { StampPhoto } from "@/components/ui/stamp-photo";
+import { RobotFigure } from "@/components/figures/robot/figure";
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 
@@ -38,6 +39,7 @@ const stampLabels: Record<string, string> = {
 };
 
 export default function HomePage() {
+  const [showRobot, setShowRobot] = useState(false);
   const [showTennis, setShowTennis] = useState(false);
   const [showPakistan, setShowPakistan] = useState(false);
   const [showQatar, setShowQatar] = useState(false);
@@ -79,6 +81,8 @@ export default function HomePage() {
               setShowPakistan={setShowPakistan}
               showQatar={showQatar}
               setShowQatar={setShowQatar}
+              showRobot={showRobot}
+              setShowRobot={setShowRobot}
             />
             <CredentialsSection
               showTennis={showTennis}
@@ -87,6 +91,7 @@ export default function HomePage() {
               setShowTennis={setShowTennis}
               setShowPakistan={setShowPakistan}
               setShowQatar={setShowQatar}
+              setShowRobot={setShowRobot}
             />
           </motion.div>
           <motion.div
@@ -99,22 +104,26 @@ export default function HomePage() {
             <div className="relative w-full max-w-[300px] mx-auto md:max-w-none md:mx-0">
               <AnimatePresence mode="wait">
                 <motion.div
-                  key={imageSrc}
+                  key={showRobot ? 'robot' : imageSrc}
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.35, ease: [0.25, 0.1, 0.25, 1] as [number, number, number, number] }}
                 >
-                  <StampPhoto
-                    src={imageSrc}
-                    alt="Ahmad Sadiq"
-                    label={stampLabels[imageSrc]}
-                    priority
-                  />
+                  {showRobot ? (
+                    <RobotFigure />
+                  ) : (
+                    <StampPhoto
+                      src={imageSrc}
+                      alt="Ahmad Sadiq"
+                      label={stampLabels[imageSrc]}
+                      priority
+                    />
+                  )}
                 </motion.div>
               </AnimatePresence>
               <AnimatePresence mode="wait">
-                {caption && (
+                {showRobot ? null : caption && (
                   <motion.p
                     key={imageSrc + '-caption'}
                     variants={captionVariants}

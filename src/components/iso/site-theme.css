@@ -1,0 +1,58 @@
+/* A figure that sits on the page instead of in its own card, and follows the site's theme.
+   Its paper is the page's background, so it blends in on white and on black. Light uses the
+   kit's light tokens; under the site's .dark class the kit's dark tokens take over. */
+.iso.iso-site[data-theme] {
+  --anatomy-card: var(--background);
+  --anatomy-paper: var(--background);
+  --anatomy-page: var(--background);
+}
+
+.iso.iso-site .iso-plate {
+  background: transparent;
+  box-shadow: none;
+}
+
+.iso.iso-site .iso-figure {
+  margin: 0;
+}
+
+/* the legend sits on the page, so it uses the page's own ink */
+.iso.iso-site .iso-legend {
+  color: var(--muted);
+}
+
+.iso.iso-site .iso-swatch path {
+  stroke: var(--foreground);
+}
+
+.iso.iso-site .iso-swatch[data-mark="raised"] path,
+.iso.iso-site .iso-swatch[data-mark="flat"] path,
+.iso.iso-site .iso-swatch[data-mark="dotted"] path {
+  stroke: var(--muted);
+}
+
+.iso.iso-site .iso-swatch-crease {
+  stroke: var(--muted) !important;
+}
+
+.dark .iso.iso-site[data-theme] {
+  --anatomy-text: #a3a3a3;
+  --anatomy-strong: #e6e6e6;
+  --anatomy-muted: #6e6e6e;
+  --anatomy-face: #1b1b1b;
+  --anatomy-top: #1c1c1c;
+  --anatomy-shade-0: #0f0f0f;
+  --anatomy-shade-1: #121212;
+  --anatomy-shade-2: #151515;
+  --anatomy-shade-3: #181818;
+  --anatomy-lit-top: #262626;
+  --anatomy-lit-shade: #1d1d1d;
+  --anatomy-hi: #d4d4d4;
+  --anatomy-mid: #6a6a6a;
+  --anatomy-lo: #3e3e3e;
+  --anatomy-faint: #2a2a2a;
+  --anatomy-lit: #ffffff;
+  --anatomy-halo: #050505;
+  --anatomy-halo-opacity: 0.9;
+  --anatomy-dot: #e6e6e6;
+}

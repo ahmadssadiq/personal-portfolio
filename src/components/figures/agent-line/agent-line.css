@@ -1,0 +1,139 @@
+/* The legend and caption sit outside the plate, on the page: use the page's own ink */
+.al-figure .iso-figure {
+  margin: 0;
+}
+
+.al-figure .iso-legend {
+  color: var(--muted);
+}
+
+.al-figure .iso-swatch path {
+  stroke: var(--foreground);
+}
+
+.al-figure .iso-swatch[data-mark="raised"] path,
+.al-figure .iso-swatch[data-mark="flat"] path,
+.al-figure .iso-swatch[data-mark="dotted"] path {
+  stroke: var(--muted);
+}
+
+.al-figure .iso-swatch-crease {
+  stroke: var(--muted) !important;
+}
+
+.al {
+  position: relative;
+  cursor: pointer;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.al:focus-visible {
+  outline: 1px solid var(--anatomy-muted);
+  outline-offset: 6px;
+}
+
+.al .iso-svg {
+  overflow: visible;
+}
+
+/* Read only by screen readers: phase changes, never per-frame numbers */
+.al-live {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.al-shadow {
+  filter: blur(4px);
+  opacity: 0.8;
+  transform: translateY(1px);
+}
+
+/* The chart paper is lighter than the plate it sits on */
+.al-paper > .iso-top {
+  fill: var(--anatomy-lit-top);
+}
+
+.al-trace {
+  stroke-linejoin: round;
+}
+
+/* The key: a flat plate turned about the lock axis */
+.al-key {
+  fill: var(--anatomy-top);
+  stroke: var(--anatomy-hi);
+  stroke-width: var(--anatomy-weight);
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+/* The agent's four-bit identity, shown on the plate, the key and the stamp */
+.al-bit-dot {
+  fill: var(--anatomy-dot);
+  stroke: none;
+  transition: opacity 240ms var(--anatomy-ease);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .al * {
+    transition: none !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .al {
+    overflow: hidden;
+  }
+
+  .iso-plate .al .iso-svg {
+    width: 116%;
+    margin: -3% -8% -2%;
+  }
+}
+
+/* ─── Following the site's theme ─────────────────────────────────────────────
+   In "auto" the figure has no card of its own: its paper is the page's background,
+   so it blends in on white and on black. Light uses the kit's light tokens; under the
+   site's .dark class the kit's dark tokens take over, so the toggle in the footer
+   switches the figure with everything else. */
+.iso.al-auto[data-theme] {
+  --anatomy-card: var(--background);
+  --anatomy-paper: var(--background);
+  --anatomy-page: var(--background);
+}
+
+.iso.al-auto .iso-plate {
+  background: transparent;
+  box-shadow: none;
+}
+
+.dark .iso.al-auto[data-theme] {
+  --anatomy-text: #a3a3a3;
+  --anatomy-strong: #e6e6e6;
+  --anatomy-muted: #6e6e6e;
+  --anatomy-face: #1b1b1b;
+  --anatomy-top: #1c1c1c;
+  --anatomy-shade-0: #0f0f0f;
+  --anatomy-shade-1: #121212;
+  --anatomy-shade-2: #151515;
+  --anatomy-shade-3: #181818;
+  --anatomy-lit-top: #262626;
+  --anatomy-lit-shade: #1d1d1d;
+  --anatomy-hi: #d4d4d4;
+  --anatomy-mid: #6a6a6a;
+  --anatomy-lo: #3e3e3e;
+  --anatomy-faint: #2a2a2a;
+  --anatomy-lit: #ffffff;
+  --anatomy-halo: #050505;
+  --anatomy-halo-opacity: 0.9;
+  --anatomy-dot: #e6e6e6;
+  --anatomy-red: #ff6b6b;
+  --anatomy-green: #6be0a0;
+  --anatomy-blue: #6b9bff;
+}

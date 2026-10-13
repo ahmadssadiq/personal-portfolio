@@ -155,6 +155,9 @@ export default function AboutPage() {
                     <div className="text-foreground" style={{ fontSize: '14px', lineHeight: '1.4' }}>• Building an observability layer to trace agent decisions, actions, and outputs across distributed workflows, enabling complete attribution of actions to specific agents.</div>
                     <div className="text-foreground" style={{ fontSize: '14px', lineHeight: '1.4' }}>• Designing agent identity and credentialing systems to support reliable, auditable agent attribution across distributed workflows.</div>
                   </div>
+                  <a href="/experience/connectra" className="inline-block mt-3 text-sm font-medium text-foreground underline hover:text-link-hover transition-colors duration-200">
+                    Learn More
+                  </a>
                 </motion.div>
 
                 {/* Ooredoo Money */}

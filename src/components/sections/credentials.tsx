@@ -59,6 +59,19 @@ const CredentialsSection = ({
         variants={credentialVariants}
       >
         /{' '}
+        <span className="text-sm bg-gradient-to-r from-[#8900e1] to-[#d8b4fe] bg-clip-text text-transparent">
+          NYU Tandon
+        </span>{' '}
+        MS Mechatronics &amp; Robotics (expected May 2028)
+      </motion.p>
+
+      <motion.p
+        className={`mb-1 text-sm font-normal transition-colors duration-300 ${
+          dimmed ? 'text-muted opacity-70' : 'text-muted'
+        }`}
+        variants={credentialVariants}
+      >
+        /{' '}
         <button
           onClick={() => {
             setShowBoston(!showBoston);
@@ -76,6 +89,28 @@ const CredentialsSection = ({
           Boston University
         </button>{' '}
         Computer Science (May 2025)
+      </motion.p>
+
+      <motion.p
+        className={`mb-1 text-sm font-normal transition-colors duration-300 ${
+          dimmed ? 'text-muted opacity-70' : 'text-muted'
+        }`}
+        variants={credentialVariants}
+      >
+        /{' '}
+        <a
+          href="mailto:asadiq456@outlook.com"
+          className="text-sm hover:text-link-hover transition-colors duration-200"
+        >
+          asadiq456@outlook.com
+        </a>
+        {' · '}
+        <a
+          href="mailto:as15383@nyu.edu"
+          className="text-sm hover:text-link-hover transition-colors duration-200"
+        >
+          as15383@nyu.edu
+        </a>
       </motion.p>
 
       <motion.p

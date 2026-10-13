@@ -56,7 +56,20 @@ const rightColumnVariants = {
 };
 
 // ─── Project data ─────────────────────────────────────────────────────────────
-const projects = [
+const projects: {
+  id: string;
+  title: string;
+  description: string;
+  href?: string;
+  hasBorder: boolean;
+}[] = [
+  {
+    id: 'lyft-price-prediction',
+    title: 'Lyft Price Prediction Analysis',
+    description:
+      'Engineered a scalable Python/Pandas pipeline to preprocess 300K+ Lyft trips, including timestamp conversion, one-hot encoding, and feature selection. Applied PCA and GridSearchCV for Ridge and Decision Tree models, reducing test MSE from 4.36 to 2.71 for the tree model.',
+    hasBorder: true,
+  },
   {
     id: 'cbs-ta',
     title: 'CBS-TA Performance Analysis',
@@ -136,13 +149,15 @@ export default function ProjectsPage() {
                     variants={listItemVariants}
                   >
                     <h3 className="text-base font-medium text-foreground mb-2">{title}</h3>
-                    <p className="text-sm text-foreground mb-4">{description}</p>
-                    <Link
-                      href={href}
-                      className="text-sm font-medium text-foreground underline hover:text-link-hover transition-colors duration-200"
-                    >
-                      Learn More
-                    </Link>
+                    <p className={`text-sm text-foreground ${href ? 'mb-4' : ''}`}>{description}</p>
+                    {href && (
+                      <Link
+                        href={href}
+                        className="text-sm font-medium text-foreground underline hover:text-link-hover transition-colors duration-200"
+                      >
+                        Learn More
+                      </Link>
+                    )}
                   </motion.div>
                 ))}
               </motion.div>

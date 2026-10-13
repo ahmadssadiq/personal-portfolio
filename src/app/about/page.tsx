@@ -55,6 +55,26 @@ const rightColumnVariants = {
   },
 };
 
+// ─── Skills data ──────────────────────────────────────────────────────────────
+const skills = [
+  {
+    label: 'AI & Automation',
+    items: 'LangChain, LangGraph, OpenAI APIs, LLM orchestration, structured outputs, REST APIs, webhooks',
+  },
+  {
+    label: 'Languages',
+    items: 'Python, TypeScript, JavaScript, SQL, C/C++, React, HTML, CSS',
+  },
+  {
+    label: 'Platforms & Tools',
+    items: 'PostgreSQL, Node.js, Firebase, Grafana, Git',
+  },
+  {
+    label: 'Methods',
+    items: 'Agentic pipeline design, observability & audit logging, event sourcing & replay, distributed systems design',
+  },
+];
+
 export default function AboutPage() {
   const [gameState, setGameState] = useState({
     isPlaying: true,
@@ -93,7 +113,7 @@ export default function AboutPage() {
             <Navigation />
           </div>
 
-          {/* Centre — Experience list */}
+          {/* Centre — Experience list + skills */}
           <div className="w-full md:w-[500px] pt-6 md:pt-12 min-w-0">
             <div className="space-y-8 break-words overflow-wrap-anywhere">
 
@@ -113,6 +133,46 @@ export default function AboutPage() {
                 animate="visible"
               >
 
+                {/* Connectra */}
+                <motion.div className="border-b border-border pb-6" variants={listItemVariants}>
+                  <div className="flex justify-between items-start mb-2">
+                    <div className="flex items-center gap-2">
+                      <a
+                        href="https://joinconnectra.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 hover:opacity-80 transition-opacity duration-200"
+                      >
+                        <Image src="/images/connectra-mark.png" alt="Connectra Logo" width={20} height={20} className="rounded-sm" />
+                        <h3 className="text-lg font-medium text-foreground">Connectra, New York, NY</h3>
+                      </a>
+                    </div>
+                    <span className="text-sm text-muted">Sep 2025 – Present</span>
+                  </div>
+                  <p className="text-sm text-muted mb-3">Cofounder &amp; CTO</p>
+                  <div className="space-y-1">
+                    <div className="text-foreground" style={{ fontSize: '14px', lineHeight: '1.4' }}>• Architecting a full-stack agentic platform from zero, designing multi-step LLM orchestration pipelines with tool-calling and structured JSON outputs to make agent decisions consistent, machine-readable, and auditable end-to-end.</div>
+                    <div className="text-foreground" style={{ fontSize: '14px', lineHeight: '1.4' }}>• Building an observability layer to trace agent decisions, actions, and outputs across distributed workflows, enabling complete attribution of actions to specific agents.</div>
+                    <div className="text-foreground" style={{ fontSize: '14px', lineHeight: '1.4' }}>• Designing agent identity and credentialing systems to support reliable, auditable agent attribution across distributed workflows.</div>
+                  </div>
+                </motion.div>
+
+                {/* Ooredoo Money */}
+                <motion.div className="border-b border-border pb-6" variants={listItemVariants}>
+                  <div className="flex justify-between items-start mb-2">
+                    <div className="flex items-center gap-2">
+                      <Image src="/images/ooredoo-money.png" alt="Ooredoo Money Logo" width={20} height={20} className="rounded-sm" />
+                      <h3 className="text-lg font-medium text-foreground">Ooredoo Money, Doha, Qatar</h3>
+                    </div>
+                    <span className="text-sm text-muted">Jan 2026 – Aug 2026</span>
+                  </div>
+                  <p className="text-sm text-muted mb-3">Data Engineer</p>
+                  <div className="space-y-1">
+                    <div className="text-foreground" style={{ fontSize: '14px', lineHeight: '1.4' }}>• Built SQL/Hive pipelines processing 1M+ daily financial transactions, designing audit-ready data models for traceability across a QAR 30M+ monthly remittance platform.</div>
+                    <div className="text-foreground" style={{ fontSize: '14px', lineHeight: '1.4' }}>• Developed observability tooling and KPI dashboards surfacing QAR 2M+ in revenue signals, with alerting on anomalous transaction patterns across 8 financial corridors.</div>
+                  </div>
+                </motion.div>
+
                 {/* IWM */}
                 <motion.div className="border-b border-border pb-6" variants={listItemVariants}>
                   <div className="flex justify-between items-start mb-2">
@@ -124,50 +184,23 @@ export default function AboutPage() {
                         className="flex items-center gap-2 hover:opacity-80 transition-opacity duration-200"
                       >
                         <Image src="/images/iwm.jpeg" alt="IWM Logo" width={20} height={20} className="rounded-sm" />
-                        <h3 className="text-lg font-medium text-foreground">IWM, NY USA</h3>
+                        <h3 className="text-lg font-medium text-foreground">IWM, New York, NY</h3>
                       </a>
                     </div>
-                    <span className="text-sm text-muted">Jun 2025 - Present</span>
+                    <span className="text-sm text-muted">Jun 2025 – Jan 2026</span>
                   </div>
                   <p className="text-sm text-muted mb-3">Founding Engineer</p>
                   <div className="space-y-1">
-                    <div className="text-foreground" style={{ fontSize: '14px', lineHeight: '1.4' }}>• Built a complete React Native application with TypeScript, Node.js/Express backend and PostgreSQL database.</div>
-                    <div className="text-foreground" style={{ fontSize: '14px', lineHeight: '1.4' }}>• Developed sophisticated waitlist ranking system inspired by Monzo&apos;s approach with logarithmic scaling.</div>
-                    <div className="text-foreground" style={{ fontSize: '14px', lineHeight: '1.4' }}>• Created streamlined 5-step onboarding flow reducing registration time to under 5 minutes.</div>
-                    <div className="text-foreground" style={{ fontSize: '14px', lineHeight: '1.4' }}>• Integrated AppsFlyer SDK for professional attribution tracking and deep linking capabilities.</div>
+                    <div className="text-foreground" style={{ fontSize: '14px', lineHeight: '1.4' }}>• Engineered a TypeScript ranking system with full event logging, enabling complete traceability of user actions and referral flows at scale.</div>
+                    <div className="text-foreground" style={{ fontSize: '14px', lineHeight: '1.4' }}>• Built Node.js/Express and PostgreSQL APIs with full audit logging and event sourcing, handling 10K+ daily transactional events with complete replay capability.</div>
                   </div>
                   <a href="/experience/iwm" className="inline-block mt-3 text-sm font-medium text-foreground underline hover:text-link-hover transition-colors duration-200">
                     Learn More
                   </a>
                 </motion.div>
 
-                {/* ACTEX */}
-                <motion.div className="border-b border-border pb-6" variants={listItemVariants}>
-                  <div className="flex justify-between items-start mb-2">
-                    <div className="flex items-center gap-2">
-                      <a
-                        href="https://www.actexlearning.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 hover:opacity-80 transition-opacity duration-200"
-                      >
-                        <Image src="/images/actex.jpeg" alt="ACTEX Learning Logo" width={20} height={20} className="rounded-sm" />
-                        <h3 className="text-lg font-medium text-foreground">ACTEX Learning, MA USA</h3>
-                      </a>
-                    </div>
-                    <span className="text-sm text-muted">May 2025 – Jun 2025</span>
-                  </div>
-                  <p className="text-sm text-muted mb-3">Quality Assurance Engineer</p>
-                  <div className="space-y-1">
-                    <div className="text-foreground" style={{ fontSize: '14px', lineHeight: '1.4' }}>• Ran cross-platform smoke &amp; regression tests on macOS, iOS, and web builds of the Eureka! e-reader.</div>
-                    <div className="text-foreground" style={{ fontSize: '14px', lineHeight: '1.4' }}>• Logged defects with repro steps, screenshots, and severity tags in Asana; collaborated with devs to triage issues.</div>
-                    <div className="text-foreground" style={{ fontSize: '14px', lineHeight: '1.4' }}>• Drafted a &ldquo;Getting Started&rdquo; README and reusable test-case templates to onboard future testers.</div>
-                    <div className="text-foreground" style={{ fontSize: '14px', lineHeight: '1.4' }}>• Expanded the suite with edge-case scenarios (offline mode, update-over-install, accessibility compliance).</div>
-                  </div>
-                </motion.div>
-
                 {/* DuneAI */}
-                <motion.div className="border-b border-border pb-6" variants={listItemVariants}>
+                <motion.div variants={listItemVariants}>
                   <div className="flex justify-between items-start mb-2">
                     <div className="flex items-center gap-2">
                       <a
@@ -177,63 +210,45 @@ export default function AboutPage() {
                         className="flex items-center gap-2 hover:opacity-80 transition-opacity duration-200"
                       >
                         <Image src="/images/dune_ai_logo.jpeg" alt="DuneAI Logo" width={20} height={20} className="rounded-sm" />
-                        <h3 className="text-lg font-medium text-foreground">DuneAI</h3>
+                        <h3 className="text-lg font-medium text-foreground">DuneAI, Dubai, UAE</h3>
                       </a>
                     </div>
-                    <span className="text-sm text-muted">Jun 2024 - Aug 2024</span>
+                    <span className="text-sm text-muted">Jun 2024 – Aug 2024</span>
                   </div>
                   <p className="text-sm text-muted mb-3">Robotics Software Engineer</p>
                   <div className="space-y-1">
-                    <div className="text-foreground" style={{ fontSize: '14px', lineHeight: '1.4' }}>• Designed and implemented multi-agent pathfinding algorithms leveraging C++ and OpenGL.</div>
-                    <div className="text-foreground" style={{ fontSize: '14px', lineHeight: '1.4' }}>• Optimized robot sorting operations on a simulated grid.</div>
-                    <div className="text-foreground" style={{ fontSize: '14px', lineHeight: '1.4' }}>• Constructed a Python barcode scanner to automate task assignment.</div>
-                    <div className="text-foreground" style={{ fontSize: '14px', lineHeight: '1.4' }}>• Developed unit tests with Google Test for code reliability.</div>
+                    <div className="text-foreground" style={{ fontSize: '14px', lineHeight: '1.4' }}>• Designed multi-agent coordination systems with task allocation and real-time state visibility, optimizing distributed robot operations across a simulated environment.</div>
+                    <div className="text-foreground" style={{ fontSize: '14px', lineHeight: '1.4' }}>• Built automated task assignment pipelines with event-driven triggers, improving distribution reliability across agent nodes.</div>
+                    <div className="text-foreground" style={{ fontSize: '14px', lineHeight: '1.4' }}>• Wrote unit tests and observability hooks across a multi-module C++ system to increase reliability of distributed agent components.</div>
                   </div>
                   <a href="/experience/duneai" className="inline-block mt-3 text-sm font-medium text-foreground underline hover:text-link-hover transition-colors duration-200">
                     Learn More
                   </a>
                 </motion.div>
 
-                {/* AheadCare */}
-                <motion.div className="border-b border-border pb-6" variants={listItemVariants}>
-                  <div className="flex justify-between items-start mb-2">
-                    <h3 className="text-lg font-medium text-foreground">AheadCare</h3>
-                    <span className="text-sm text-muted">Jun 2023 - Mar 2024</span>
-                  </div>
-                  <p className="text-sm text-muted mb-3">CEO</p>
-                  <div className="space-y-1">
-                    <div className="text-foreground" style={{ fontSize: '14px', lineHeight: '1.4' }}>• Developed an ML Predictive FAQ system using LangChain.</div>
-                    <div className="text-foreground" style={{ fontSize: '14px', lineHeight: '1.4' }}>• Streamlined customer database updates with adaptive learning algorithms.</div>
-                    <div className="text-foreground" style={{ fontSize: '14px', lineHeight: '1.4' }}>• Improved real-time response accuracy by 30%.</div>
-                    <div className="text-foreground" style={{ fontSize: '14px', lineHeight: '1.4' }}>• Collaborated with investors to secure $25,000 in funding.</div>
-                  </div>
-                </motion.div>
+              </motion.div>
 
-                {/* Starlink */}
-                <motion.div variants={listItemVariants}>
-                  <div className="flex justify-between items-start mb-2">
-                    <div className="flex items-center gap-2">
-                      <a
-                        href="https://www.starlink.qa"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 hover:opacity-80 transition-opacity duration-200"
-                      >
-                        <Image src="/images/starlink.jpg" alt="Starlink Logo" width={20} height={20} className="rounded-sm" />
-                        <h3 className="text-lg font-medium text-foreground">Starlink</h3>
-                      </a>
-                    </div>
-                    <span className="text-sm text-muted">Jun 2022 - Aug 2022</span>
-                  </div>
-                  <p className="text-sm text-muted mb-3">Full Stack Developer</p>
-                  <div className="space-y-1">
-                    <div className="text-foreground" style={{ fontSize: '14px', lineHeight: '1.4' }}>• Executed a responsive e-commerce platform using React and Python/Django.</div>
-                    <div className="text-foreground" style={{ fontSize: '14px', lineHeight: '1.4' }}>• Increased user engagement and sales by 20%.</div>
-                    <div className="text-foreground" style={{ fontSize: '14px', lineHeight: '1.4' }}>• Optimized database queries and achieved real-time data synchronization.</div>
-                    <div className="text-foreground" style={{ fontSize: '14px', lineHeight: '1.4' }}>• Reduced load times by 30%.</div>
-                  </div>
-                </motion.div>
+              <motion.h2
+                className="text-xl font-medium text-foreground mb-6"
+                variants={headingVariants}
+                initial="hidden"
+                animate="visible"
+              >
+                Skills
+              </motion.h2>
 
+              <motion.div
+                className="space-y-4"
+                variants={listContainerVariants}
+                initial="hidden"
+                animate="visible"
+              >
+                {skills.map(({ label, items }) => (
+                  <motion.div key={label} variants={listItemVariants}>
+                    <p className="text-sm text-muted mb-1">{label}</p>
+                    <div className="text-foreground" style={{ fontSize: '14px', lineHeight: '1.4' }}>{items}</div>
+                  </motion.div>
+                ))}
               </motion.div>
             </div>
           </div>

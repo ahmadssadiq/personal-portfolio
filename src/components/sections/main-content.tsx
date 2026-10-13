@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import { motion } from 'motion/react';
 import {
   PreviewLinkCard,
@@ -110,8 +109,10 @@ const MainContent = ({
       {/* Paragraph 2 */}
       <motion.p className={baseClass} variants={paragraphVariants}>
         My journey took a quick u-turn when I chose not to pursue medical school
-        in the UK and go to Boston University to study Computer Science. From
-        there I explored different industries as a software engineer from
+        in the UK and go to Boston University to study Computer Science. I
+        graduated in May 2025, and now I&apos;m a first-year MS student in
+        Mechatronics &amp; Robotics at NYU Tandon. Along the way I explored
+        different industries as a software engineer from
         ecommerce → startup → robotics → fintech. I&apos;ve vastly enjoyed
         exploring and realized my passion relies in creating meaningful systems
         that scale with quality. Over the past two years, I&apos;ve implemented
@@ -139,20 +140,7 @@ const MainContent = ({
 
       {/* Paragraph 4 — currently at */}
       <motion.p className={baseClass} variants={paragraphVariants}>
-        Currently at{' '}
-        <Link
-          href="/experience/iwm"
-          className="inline-flex items-end hover:opacity-80 transition-opacity duration-200"
-        >
-          <Image
-            src="/images/iwm.jpeg"
-            alt="IWM Logo"
-            width={20}
-            height={20}
-            className="rounded-sm"
-          />
-        </Link>
-        {', '}producing{' '}
+        Currently Cofounder &amp; CTO at{' '}
         <PreviewLinkCard href="https://joinconnectra.com" followCursor="y">
           <PreviewLinkCardTrigger
             href="https://joinconnectra.com"
@@ -177,7 +165,7 @@ const MainContent = ({
             <PreviewLinkCardImage alt="Connectra Website Preview" />
           </PreviewLinkCardContent>
         </PreviewLinkCard>
-        {' '}and{' '}
+        {', '}producing{' '}
         <PreviewLinkCard href="https://skansnetwork.com" followCursor="y">
           <PreviewLinkCardTrigger
             href="https://skansnetwork.com"

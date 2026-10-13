@@ -1,0 +1,34 @@
+.rb {
+  cursor: ew-resize;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.rb:focus-visible {
+  outline: 1px solid var(--anatomy-muted);
+  outline-offset: 4px;
+}
+
+.rb .iso-svg {
+  overflow: visible;
+}
+
+/* The figure lives in a 300px column: a tighter card, with the hint stacked above the readout */
+.rb-figure .iso-plate {
+  padding: 34px 6px 52px;
+}
+
+.rb-figure .iso-plate-corners {
+  inset: 8px 6px;
+}
+
+.rb-figure .iso-plate-corner[data-corner="hint"] {
+  bottom: 16px;
+}
+
+.rb-figure .iso-legend {
+  font-size: 12px;
+  margin-top: 6px;
+}
